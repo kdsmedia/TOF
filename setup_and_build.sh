@@ -20,10 +20,11 @@ unzip -o -d android-sdk android-sdk.zip
 rm android-sdk.zip
 
 echo "--- 3. SETTING UP ANDROID SDK ---"
-# Create the directory structure expected by sdkmanager
-mkdir -p android-sdk/cmdline-tools/latest
-# Move the extracted files into the 'latest' directory
-mv android-sdk/cmdline-tools/* android-sdk/cmdline-tools/latest/
+# The zip extracts to 'cmdline-tools'. We rename it to 'latest'.
+mv android-sdk/cmdline-tools android-sdk/latest
+# Then we create the parent 'cmdline-tools' and move 'latest' inside it.
+mkdir android-sdk/cmdline-tools
+mv android-sdk/latest android-sdk/cmdline-tools/
 # Set environment variables for this session
 export ANDROID_HOME=$PWD/android-sdk
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
@@ -37,8 +38,10 @@ sdkmanager "platform-tools" "platforms;android-29" "build-tools;29.0.3"
 echo "--- 4. GENERATING DEBUG KEYSTORE ---"
 # Ensure the .android directory exists
 mkdir -p $HOME/.android
-# Generate the debug keystore
-keytool -genkey -v -keystore "$HOME/.android/debug.keystore" -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" -storepass android -keypass android
+# Generate the debug keystore if it doesn't exist
+if [ ! -f "$HOME/.android/debug.keystore" ]; then
+    keytool -genkey -v -keystore "$HOME/.android/debug.keystore" -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" -storepass android -keypass android
+fi
 
 echo "--- 5. DOWNLOADING GODOT AND EXPORT TEMPLATES ---"
 wget https://downloads.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6_stable_linux_headless.64.zip
