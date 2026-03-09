@@ -3,6 +3,12 @@
 # Exit on error
 set -e
 
+echo "--- 0. FIXING APT SOURCES ---"
+# The default Codespace image may contain a broken yarn repository source
+if [ -f /etc/apt/sources.list.d/yarn.list ]; then
+    sudo rm /etc/apt/sources.list.d/yarn.list
+fi
+
 echo "--- 1. UPDATING AND INSTALLING SYSTEM DEPENDENCIES ---"
 sudo apt-get update
 sudo apt-get install -y wget unzip openjdk-8-jdk
