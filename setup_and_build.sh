@@ -29,7 +29,7 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 echo "--- ACCEPTING SDK LICENSES ---"
 yes | sdkmanager --licenses
 
-echo "--- INSTALLING SDK COMPONENTS ---
+echo "--- INSTALLING SDK COMPONENTS ---"
 sdkmanager "platform-tools" "platforms;android-29" "build-tools;29.0.3"
 
 echo "--- 4. GENERATING DEBUG KEYSTORE ---"
@@ -41,7 +41,7 @@ fi
 echo "--- 5. DOWNLOADING GODOT AND EXPORT TEMPLATES FROM GITHUB ---"
 # Using the previously validated successful download URL from GitHub releases.
 wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6-stable_linux_server.64.zip
-wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6_stable_export_templates.tpz
+wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6-stable_export_templates.tpz
 
 unzip -o Godot_v2.1.6-stable_linux_server.64.zip
 mv Godot_v2.1.6-stable_linux_server.64 godot_headless
@@ -49,11 +49,11 @@ chmod +x godot_headless
 rm Godot_v2.1.6-stable_linux_server.64.zip
 
 mkdir -p ~/.godot/templates
-mv Godot_v2.1.6_stable_export_templates.tpz ~/.godot/templates/2.1.6.stable.tpz
+mv Godot_v2.1.6-stable_export_templates.tpz ~/.godot/templates/2.1.6.stable.tpz
 
 echo "--- 6. BUILDING THE APK ---"
 echo "Running Godot export command..."
-./godot_headless -v --path Tanks-of-Freedom/ --export-debug "Android" "TanksOfFreedom.apk"
+./godot_headless -v --path . --export-debug "Android" "TanksOfFreedom.apk"
 
 echo ""
 echo "--- BUILD COMPLETE! ---"
