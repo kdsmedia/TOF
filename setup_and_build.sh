@@ -44,9 +44,9 @@ if [ ! -f "$HOME/.android/debug.keystore" ]; then
 fi
 
 echo "--- 5. DOWNLOADING GODOT AND EXPORT TEMPLATES ---"
-# Using official Godot servers instead of community mirror
-wget https://downloads.godotengine.org/godot/2.1.6/Godot_v2.1.6_stable_linux_headless.64.zip
-wget https://downloads.godotengine.org/godot/2.1.6/Godot_v2.1.6_stable_export_templates.tpz
+# Using direct links from GitHub releases for reliability
+wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6_stable_linux_headless.64.zip
+wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6_stable_export_templates.tpz
 
 unzip -o Godot_v2.1.6_stable_linux_headless.64.zip
 mv Godot_v2.1.6_stable_linux_headless.64 godot_headless
