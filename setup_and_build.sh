@@ -59,7 +59,8 @@ mv Godot_v2.1.6_stable_export_templates.tpz ~/.godot/templates/2.1.6.stable.tpz
 
 echo "--- 6. BUILDING THE APK ---"
 echo "Running Godot export command..."
-./godot_headless -v --path TOF/ --export-debug "Android" "TanksOfFreedom.apk"
+# Correcting the path to the actual game project folder
+./godot_headless -v --path Tanks-of-Freedom/ --export-debug "Android" "TanksOfFreedom.apk"
 
 echo ""
 echo "--- BUILD COMPLETE! ---"
