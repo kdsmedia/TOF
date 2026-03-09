@@ -43,15 +43,16 @@ if [ ! -f "$HOME/.android/debug.keystore" ]; then
     keytool -genkey -v -keystore "$HOME/.android/debug.keystore" -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" -storepass android -keypass android
 fi
 
-echo "--- 5. DOWNLOADING GODOT AND EXPORT TEMPLATES ---"
-# Reverting to the original TuxFamily mirror, as it has the correct headless files.
-wget https://downloads.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6_stable_linux_headless.64.zip
-wget https://downloads.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6_stable_export_templates.tpz
+echo "--- 5. DOWNLOADING GODOT AND EXPORT TEMPLATES FROM GITHUB ---"
+# Using direct links from the official GitHub releases for maximum reliability.
+wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/godot-2.1.6-stable-linux-headless-64bit.zip
+wget https://github.com/godotengine/godot/releases/download/2.1.6-stable/Godot_v2.1.6_stable_export_templates.tpz
 
-unzip -o Godot_v2.1.6_stable_linux_headless.64.zip
-mv Godot_v2.1.6_stable_linux_headless.64 godot_headless
+unzip -o godot-2.1.6-stable-linux-headless-64bit.zip
+# The archive extracts a file with a different name, so we handle that.
+mv godot.linux.headless.64 godot_headless
 chmod +x godot_headless
-rm Godot_v2.1.6_stable_linux_headless.64.zip
+rm godot-2.1.6-stable-linux-headless-64bit.zip
 
 mkdir -p ~/.godot/templates
 mv Godot_v2.1.6_stable_export_templates.tpz ~/.godot/templates/2.1.6.stable.tpz
