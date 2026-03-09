@@ -271,7 +271,7 @@ LABEL_FORFEIT,PERDER
 LABEL_CLEAR,LIMPIAR
 LABEL_HELP,AYUDA
 MSG_MULTIPLAYER_WELCOME,"¡Bienvenido al modo multijugador de ToF!"
-TIP_ONLINE_HELP_1,"Para empezar una partida, presiona el botón Crear en uno de los espacios libres. Si el botón está desactivado, significa que primero debes descargar un mapa online. ¡Visita http://online.tof.p1x.in para encontrar algunos! Una vez hayas alojado un juego, dale el código de la partida a tu amigo para que se una."
+TIP_ONLINE_HELP_1,"Para empezar una partida, presiona el botón Crear en uno de los espacios libres. Si el botón está desactivado, significa que primero debes descargar un mapa online. ¡Visita http://online.tof.tof.in para encontrar algunos! Una vez hayas alojado un juego, dale el código de la partida a tu amigo para que se una."
 TIP_ONLINE_HELP_2,"Mientras estás en una partida, no hay límite de tiempo para que tú o tu oponente termine el turno. Recuerda, no tienes que esperar a que llegue tu turno sin hacer nada - ¡eres libre de jugar campañas, escaramuzas o alojar una partida multijugador diferente! Dejar el juego también es una opción, pero ¿harías eso?"
 TIP_ONLINE_HELP_3,"Estás limitado/a a solo cuatro espacios para partidas, así que recuerda borrar los que hayas terminado."
 MSG_SPAWN_BLOCKED,PUNTO DE SALIDA BLOQUEADO

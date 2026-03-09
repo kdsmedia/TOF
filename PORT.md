@@ -1,4 +1,4 @@
-# Tanks of Freedom Community Ports Guide
+# ToF App Community Ports Guide
 
 ## About this guide
 

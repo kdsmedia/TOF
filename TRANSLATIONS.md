@@ -1,4 +1,4 @@
-# Tanks of Freedom Community Translations Guide
+# ToF App Community Translations Guide
 
 ## About this guide
 This file is meant to be a guide for any and all ToF community members wanting to import own translations into the game

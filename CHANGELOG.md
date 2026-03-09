@@ -1,5 +1,5 @@
 
-# Tanks of Freedom
+# ToF App
 ## Changelog
 
 ### 0.7.1-beta

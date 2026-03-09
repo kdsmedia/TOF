@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/gui/buttons/analog_size3_2.png" type="Texture" id=12]
 [ext_resource path="res://assets/gui/buttons/analog_size3_3.png" type="Texture" id=13]
 [ext_resource path="res://gui/font_14.tres" type="Theme" id=14]
-[ext_resource path="res://assets/branding/p1x_logo.png" type="Texture" id=15]
+[ext_resource path="res://assets/branding/tof_logo.png" type="Texture" id=15]
 [ext_resource path="res://assets/gui/buttons/analog_size3_4.png" type="Texture" id=16]
 [ext_resource path="res://gui/small_gray_theme.tres" type="Theme" id=17]
 [ext_resource path="res://assets/gui/buttons/analog_size2_0.png" type="Texture" id=18]
@@ -455,7 +455,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="p1x" type="Sprite" parent="top/center"]
+[node name="tof" type="Sprite" parent="top/center"]
 
 transform/pos = Vector2( -287, 38 )
 transform/scale = Vector2( 2, 2 )
