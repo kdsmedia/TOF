@@ -126,7 +126,7 @@ func _input(event):
                     self.registered_click = false
 
             # MOUSE SELECT
-            if event.type == InputEvent.MOUSE_BUTTON and event.button_index == BUTTON_LEFT:
+            if event.type == InputEvent.MOUSE_BUTTON && event.button_index == BUTTON_LEFT:
                 if not self.bag.hud_dead_zone.is_dead_zone(event.x, event.y):
                     var position = current_map_terrain.map_to_world(selector_position)
                     if not self.bag.hud_dead_zone.is_dead_zone(event.x, event.y):
@@ -313,6 +313,13 @@ func unload_map():
     self.sound_controller.play_soundtrack()
     self.bag.camera.reset_player_cameras()
 
+    # Load and show interstitial ad when returning to the main menu
+    var config = ConfigFile.new()
+    var err = config.load("res://engine.cfg")
+    if err == OK:
+        var interstitial_ad_id = config.get_value("admob", "interstitial_ad_id")
+        admob.load_interstitial(interstitial_ad_id)
+
 func toggle_menu(target = 'menu', skip_back_check = true):
     if self.bag.workshop.is_working and not self.bag.workshop.is_suspended:
         return
@@ -369,6 +376,13 @@ func load_menu():
     self.sound_controller.play_soundtrack()
     self.bag.language.reload_labels()
     set_process_input(true)
+    
+    # Load rewarded ad on main menu load
+    var config = ConfigFile.new()
+    var err = config.load("res://engine.cfg")
+    if err == OK:
+        var rewarded_ad_id = config.get_value("admob", "rewarded_ad_id")
+        admob.load_rewarded_video(rewarded_ad_id)
 
 func lock_for_cpu():
     self.is_locked_for_cpu = true
@@ -413,6 +427,16 @@ func write_settings_to_file():
     self.bag.file_handler.write(self.SETTINGS_PATH, self.settings)
 
 func _ready():
+    var config = ConfigFile.new()
+    var err = config.load("res://engine.cfg")
+    if err == OK:
+        var app_id = config.get_value("admob", "app_id")
+        if admob.has_signal("interstitial_loaded"):
+            admob.connect("interstitial_loaded", self, "_on_admob_interstitial_loaded")
+        if admob.has_signal("rewarded_video_loaded"):
+            admob.connect("rewarded_video_loaded", self, "_on_admob_rewarded_video_loaded")
+        admob.init(true, get_instance_ID())
+
     self.bag = preload('res://scripts/services/dependency_container.gd').new()
     self.scale_root = get_node("/root/game/viewport/pixel_scale")
     self.read_settings_from_file()
@@ -435,3 +459,9 @@ func _ready():
     self.bag.language.reload_labels()
     if self.is_mobile:
         self.get_tree().set_auto_accept_quit(false)
+
+func _on_admob_interstitial_loaded():
+    admob.show_interstitial()
+
+func _on_admob_rewarded_video_loaded():
+    admob.show_rewarded_video()
