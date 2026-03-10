@@ -1,4 +1,3 @@
-
 var root
 var ready = false
 var screen_size
@@ -28,10 +27,10 @@ func is_dead_zone(x, y):
     if self.check_if_in_zone(x, y, self.screen_size.y - self.pick_button_size.y, self.pick_button_size, self.pick_button_offset):
         return true
 
-    if self.root.bag.controllers.workshop_gui_controller.toolbox_panel.toolbox_panel.is_visible():
+    if self.root.bag.controllers.workshop_gui_controller.toolbox_panel.toolbox_panel.visible:
         return true
 
-    if self.root.bag.controllers.workshop_gui_controller.building_blocks_panel.building_block_panel.is_visible():
+    if self.root.bag.controllers.workshop_gui_controller.building_blocks_panel.building_block_panel.visible:
         return true
 
     if self.root.bag.controllers.workshop_gui_controller.file_panel.is_map_picker_visible():

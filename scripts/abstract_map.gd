@@ -1,3 +1,4 @@
+extends Object
 
 var size = Vector2(0, 0)
 var fields = [[null]]
@@ -72,4 +73,3 @@ func create_out_of_bounds_field():
 	var field = self.create_field(Vector2(-1, -1))
 
 	return field
-

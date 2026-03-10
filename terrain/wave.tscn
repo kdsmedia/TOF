@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/terrain/waves.png" type="Texture" id=1]
+[ext_resource path="res://scripts/wave_controller.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "wave_0"
+length = 10.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 4, 3, 2 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "wave_1"
+length = 10.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PoolRealArray( 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 4, 3, 2 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "wave_2"
+length = 10.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PoolRealArray( 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 4, 3, 2 ]
+}
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 6
+script = ExtResource( 2 )
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/wave_0 = SubResource( 1 )
+anims/wave_1 = SubResource( 2 )
+anims/wave_2 = SubResource( 3 )
+autoplay = "wave_0"

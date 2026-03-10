@@ -1,3 +1,5 @@
+extends Object
+
 var defender_stats
 var attacker_stats
 

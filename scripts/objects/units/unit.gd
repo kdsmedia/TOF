@@ -1,4 +1,3 @@
-
 extends Sprite
 
 export var player = -1
@@ -32,10 +31,10 @@ var visibility
 
 var group = 'unit'
 
-var explosion_template = preload('res://particle/explosion.xscn')
-var explosion_big_template = preload('res://particle/explosion_big.xscn')
+var explosion_template = preload('res://particle/explosion.tscn')
+var explosion_big_template = preload('res://particle/explosion_big.tscn')
 var explosion
-var floating_damage_template = preload('res://particle/hit_points.xscn')
+var floating_damage_template = preload('res://particle/hit_points.tscn')
 var floating_damage
 var die = false
 var active = 1
@@ -77,7 +76,7 @@ func add_move(position):
     self.move_positions.push_back(position)
 
 func get_initial_pos():
-    position_on_map = current_map_terrain.world_to_map(self.get_pos())
+    position_on_map = current_map_terrain.world_to_map(self.position)
     self.add_move(position_on_map)
     return position_on_map
 
@@ -115,15 +114,15 @@ func reset_ap(limit_ap):
 
 func set_pos_map(new_position):
     if new_position.x > position_on_map.x:
-        self.set_flip_h(true)
+        self.flip_h = true
     elif new_position.x < position_on_map.x:
-        self.set_flip_h(false)
+        self.flip_h = false
     if new_position.y < position_on_map.y:
-        self.set_flip_h(true)
+        self.flip_h = true
     elif new_position.y > position_on_map.y:
-        self.set_flip_h(false)
+        self.flip_h = false
 
-    self.set_pos(current_map_terrain.map_to_world(new_position) + sprite_offset_for_64x64)
+    self.position = current_map_terrain.map_to_world(new_position) + sprite_offset_for_64x64
     self.add_move(position_on_map)
     position_on_map = new_position
     self.teleport_anim.play('in')
@@ -179,16 +178,16 @@ func update_healthbar():
     var new_frame = floor((1.0 - life_status)*10)
     if new_frame > 9:
         new_frame = 9
-    self.health_bar.set_frame(new_frame)
+    self.health_bar.frame = new_frame
 
 func show_explosion():
-    self.get_node("/root/game").action_controller.exploding = true
+    owner.action_controller.exploding = true
     explosion = explosion_template.instance()
     explosion.unit = self
     self.add_child(explosion)
 
 func show_big_explosion():
-    self.get_node("/root/game").action_controller.exploding = true
+    owner.action_controller.exploding = true
     explosion = explosion_big_template.instance()
     explosion.unit = self
     self.add_child(explosion)
@@ -196,21 +195,21 @@ func show_big_explosion():
 
 func clear_explosion():
     self.remove_child(explosion)
-    explosion.call_deferred("free")
-    self.get_node("/root/game").action_controller.exploding = false
+    explosion.queue_free()
+    owner.action_controller.exploding = false
     if die:
         parent.remove_child(self)
         self.die()
 
 func show_floating_damage(amount):
     floating_damage = floating_damage_template.instance()
-    floating_damage.set_text(str(amount))
+    floating_damage.get_node("Label").text = str(amount)
     floating_damage.unit = self
     self.add_child(floating_damage)
 
 func clear_floating_damage():
     self.remove_child(floating_damage)
-    floating_damage.call_deferred("free")
+    floating_damage.queue_free()
 
 func die_after_explosion(ysort):
     self.remove_from_group('units')
@@ -233,29 +232,27 @@ func take_all_ap():
     self.set_no_ap_idle()
 
 func fix_initial_pos():
-    self.set_pos(self.get_pos() + sprite_offset_for_64x64)
+    self.position = self.position + sprite_offset_for_64x64
 
 func get_type_name():
     return tr(self.type_name_label)
 
 func can_attack_unit_type(defender):
-    if type == 1 && defender.type == 2:
+    if type == 1 and defender.type == 2:
         return false
 
     return true
 
 func _ready():
     self.add_to_group("units")
-    self.anim = self.get_node("anim")
-    self.teleport_anim = self.get_node("teleport_anim")
-    if self.get_node("/root/game"):
-        self.current_map_terrain = self.get_node("/root/game").current_map_terrain
-        self.current_map = self.get_node("/root/game").current_map
-    self.health_bar = self.get_node("health")
-    self.icon_shield = self.get_node("shield")
+    self.anim = $("anim")
+    self.teleport_anim = $("teleport_anim")
+    if owner:
+        self.current_map_terrain = owner.current_map_terrain
+        self.current_map = owner.current_map
+    self.health_bar = $("health")
+    self.icon_shield = $("shield")
     self.fix_initial_pos()
     self.anim.play("move")
     self.teleport_anim.play('in')
     pass
-
-

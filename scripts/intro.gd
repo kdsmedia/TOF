@@ -1,33 +1,45 @@
-
 extends Control
 
-# zuo istnieje
 var root
-var anim
-var demo_timer
-var audio
 
-func _input(event):
-    if ( event.type == InputEvent.KEY and event.pressed ) or (event.type == InputEvent.MOUSE_BUTTON and event.pressed) or (event.type == InputEvent.JOYSTICK_BUTTON and event.pressed):
-        self.root.bag.demo_mode.demo_timer.stop()
-        self.root.unlock_for_demo()
-        self.root.bag.timers.set_timeout(0.1, self.root, "load_menu")
+onready var anim: AnimationPlayer = get_node("anim")
+onready var audio: AudioStreamPlayer = get_node("audio")
 
-        if event.type == InputEvent.JOYSTICK_BUTTON:
-            self.root.bag.gamepad.mark_gamepad(event)
+func _input(event: InputEvent) -> void:
+    if (event is InputEventKey and event.pressed) or \
+       (event is InputEventMouseButton and event.pressed) or \
+       (event is InputEventJoypadButton and event.pressed):
+        
+        set_process_input(false)
 
-func init_root(root):
-    self.root = root
+        if not root:
+            printerr("Root node not set in intro.gd")
+            return
 
-func _ready():
-    anim = self.get_node("anim")
-    audio = self.get_node('audio')
-    if self.root != null && self.root.settings['music_enabled']:
-        audio.play()
+        if root.bag and root.bag.has("demo_mode") and root.bag.demo_mode.has_method("demo_timer"):
+            var demo_timer = root.bag.demo_mode.demo_timer
+            if demo_timer and not demo_timer.is_stopped():
+                demo_timer.stop()
+
+        if root.has_method("unlock_for_demo"):
+            root.unlock_for_demo()
+
+        get_tree().create_timer(0.1).connect("timeout", root, "load_menu")
+
+        if event is InputEventJoypadButton:
+            if root.bag and root.bag.has("gamepad") and root.bag.gamepad.has_method("mark_gamepad"):
+                root.bag.gamepad.mark_gamepad(event)
+
+func init_root(p_root) -> void:
+    root = p_root
+
+func _ready() -> void:
     set_process_input(true)
-    pass
+    
+    if root and root.settings.get("music_enabled", false):
+        audio.play()
 
-func _on_idle_timer_timeout():
+func _on_idle_timer_timeout() -> void:
     anim.play("idle")
-    self.root.bag.demo_mode.start_demo_mode()
-    pass # replace with function body
+    if root and root.bag and root.bag.has("demo_mode") and root.bag.demo_mode.has_method("start_demo_mode"):
+        root.bag.demo_mode.start_demo_mode()

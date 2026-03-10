@@ -33,7 +33,7 @@ var camera_zoom_level = null
 func _initialize():
     self.action_triggers._init_bag(self.bag)
     self.init_handlers()
-    self.camera_zoom_level = self.bag.root.settings['camera_zoom']
+    self.camera_zoom_level = ProjectSettings.get_setting('display/camera_zoom')
 
 func reset():
     self.story_bookmark = 0
@@ -80,7 +80,7 @@ func perform_next_action():
 
         return
 
-    if self.pause or self.bag.camera.panning or self.bag.root.is_paused:
+    if self.pause or self.bag.camera.panning or get_tree().paused:
         self.bag.timers.set_timeout(self.STEP_INTERVAL, self, "perform_next_action")
         return
 

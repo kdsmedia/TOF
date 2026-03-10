@@ -66,9 +66,9 @@ func init_root(root_node):
     self.map_list._init_bag(self)
     self.campaign.load_campaign_progress()
 
-    if Globals.get('tof/enable_workshop'):
+    if ProjectSettings.get_setting('tof/enable_workshop'):
         self.controllers.workshop_gui_controller = preload("res://scripts/controllers/workshop_gui_controller.gd").new()
-        self.workshop = preload("res://gui/workshop/workshop.xscn").instance()
+        self.workshop = preload("res://gui/workshop/workshop.tscn").instance()
         self.controllers.workshop_gui_controller.init_root(root_node)
         self.workshop.init(self.root)
 
@@ -122,8 +122,7 @@ func init_root(root_node):
 
     self.storyteller._init_bag(self)
 
-    if Globals.get('tof/enable_save_load'):
+    if ProjectSettings.get_setting('tof/enable_save_load'):
         self.saving = load('res://scripts/saving.gd').new()
         self.saving._init_bag(self)
-
 

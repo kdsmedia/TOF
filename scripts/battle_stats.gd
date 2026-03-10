@@ -1,3 +1,5 @@
+extends Object
+
 const DOMINATION    = "domination"
 const MOVES         = "moves"
 const TOTAL_TIME    = "total_time"
@@ -27,10 +29,10 @@ func add_moves(player):
     self.__increment(self.MOVES, player)
 
 func start_counting_time():
-    start_time = OS.get_unix_time()
+    start_time = Time.get_unix_time_from_system()
 
 func set_counting_time(player):
-    var time_now = OS.get_unix_time()
+    var time_now = Time.get_unix_time_from_system()
 
     self.__increment(self.TIME, player, time_now - start_time)
     start_time = time_now
@@ -78,4 +80,3 @@ func __fill(value):
 
 func __increment(stat, player, value = 1):
     self.stats[stat][player] = self.stats[stat][player] + value
-

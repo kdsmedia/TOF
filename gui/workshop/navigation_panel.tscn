@@ -1,0 +1,167 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://gui/font_16.tres" type="Theme" id=1]
+[ext_resource path="res://assets/gui/buttons/analog_size3_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/buttons/analog_size3_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/buttons/analog_size3_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/buttons/analog_size3_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/buttons/analog_size3_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/buttons/analog_size3_6.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/buttons/analog_size3_7.png" type="Texture" id=8]
+[ext_resource path="res://assets/gui/dialogs/menu9@2x.png" type="Texture" id=9]
+[ext_resource path="res://scripts/translate_me.gd" type="Script" id=10]
+
+[node name="navigation_panel" type="Control"]
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -170.0
+margin_right = 320.0
+margin_bottom = 10.0
+texture = ExtResource( 9 )
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="controls" type="Control" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="toolbox_button" type="TextureButton" parent="controls"]
+margin_left = -144.0
+margin_top = -46.0
+margin_right = 2.0
+margin_bottom = 2.0
+scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="controls/toolbox_button"]
+margin_left = -42.0
+margin_top = 16.0
+margin_right = 178.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_TOOLBOX"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_WORKSHOP_TOOLBOX"
+
+[node name="menu_button" type="TextureButton" parent="controls"]
+margin_left = -312.0
+margin_top = -168.0
+margin_right = -42.0
+margin_bottom = -112.0
+scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="controls/menu_button"]
+margin_left = -3.0
+margin_top = 16.0
+margin_right = 143.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_BACK"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_BACK"
+
+[node name="undo_button" type="TextureButton" parent="controls"]
+margin_left = 8.0
+margin_top = -52.0
+margin_right = 198.0
+margin_bottom = -4.0
+scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="controls/undo_button"]
+margin_left = -42.0
+margin_top = 16.0
+margin_right = 198.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_UNDO_BUILD"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_WORKSHOP_UNDO_BUILD"
+
+[node name="map_move_button" type="TextureButton" parent="controls"]
+margin_left = 163.0
+margin_top = -43.0
+margin_right = 307.0
+margin_bottom = 5.0
+scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="controls/map_move_button"]
+margin_left = -42.0
+margin_top = 16.0
+margin_right = 187.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_MOVE_MAP"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_WORKSHOP_MOVE_MAP"
+
+[node name="building_blocks_button" type="TextureButton" parent="controls"]
+margin_left = 160.0
+margin_top = -102.0
+margin_right = 304.0
+margin_bottom = -54.0
+scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label1" type="Label" parent="controls/building_blocks_button"]
+margin_left = -301.0
+margin_top = 30.0
+margin_right = -21.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_BUILD_TERRAIN"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_WORKSHOP_BUILD_TERRAIN"
+
+[node name="Label" type="Label" parent="controls/building_blocks_button"]
+margin_left = 144.0
+margin_top = 16.0
+margin_right = 176.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TILES"
+align = 1
+script = ExtResource( 10 )
+trans_key = "LABEL_TILES"

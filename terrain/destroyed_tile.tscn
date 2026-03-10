@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/destroyed_tile.gd" type="Script" id=1]
+[ext_resource path="res://assets/terrain/destruction.png" type="Texture" id=2]
+
+[node name="destroyed_tile" type="Sprite"]
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 4
+script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}

@@ -30,9 +30,9 @@ func _init_bag(bag):
     self.bag = bag
 
 func handle_input(event):
-    if event.type == InputEvent.JOYSTICK_MOTION:
+    if event is InputEventJoypadMotion:
         self.handle_motion(event)
-    elif event.type == InputEvent.JOYSTICK_BUTTON:
+    elif event is InputEventJoypadButton:
         self.handle_button(event)
 
     if not self.gamepad_detected:
@@ -72,10 +72,9 @@ func show_gamepad_icons():
 func is_ouya(name):
     var validator = RegEx.new()
     validator.compile("(OUYA)")
-    validator.find(name)
-    var matches = validator.get_captures()
+    var matches = validator.search(name)
 
-    if matches[1] == "OUYA":
+    if matches and matches.get_string(1) == "OUYA":
         return true
 
     return false
@@ -86,14 +85,14 @@ func switch_buttons_to_ouya():
     for icon in self.gamepad_icons:
         icon_sprite = self.bag.root.hud.get_node(icon)
         if icon_sprite != null:
-            icon_sprite.set_frame(icon_sprite.get_frame() + offset)
+            icon_sprite.frame = icon_sprite.frame + offset
 
 
 func handle_motion(event):
     if event.axis == 0:
-        self.axis_controll.x = event.value
+        self.axis_controll.x = event.axis_value
     elif event.axis == 1:
-        self.axis_controll.y = event.value
+        self.axis_controll.y = event.axis_value
 
 
 func handle_button(event):

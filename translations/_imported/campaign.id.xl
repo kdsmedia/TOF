@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="godot" target-language="id">
+    <body>
+      <trans-unit id="ACTOR_OFFICER">
+        <source>Officer</source>
+        <target>Perwira</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_FREEDOM_FIGHTER">
+        <source>Freedom Fighter</source>
+        <target>Pejuang Kebebasan</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_PALACE_GUARD">
+        <source>Palace Guard</source>
+        <target>Penjaga Istana</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_MILITIA_OFFICER">
+        <source>Militia Officer</source>
+        <target>Perwira Milisi</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_BASE_COMMANDER">
+        <source>Base Commander</source>
+        <target>Komandan Pangkalan</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_GUARD">
+        <source>Guard</source>
+        <target>Penjaga</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_PILOT">
+        <source>Pilot</source>
+        <target>Pilot</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_SOLDIER">
+        <source>Soldier</source>
+        <target>Prajurit</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_TANK_CREW">
+        <source>Tank crew</source>
+        <target>Kru tank</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_OPERATOR">
+        <source>Operator</source>
+        <target>Operator</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_TANK_COMMANDER">
+        <source>Tank commander</source>
+        <target>Komandan tank</target>
+      </trans-unit>
+      <trans-unit id="ACTOR_SCOUT">
+        <source>Scout</source>
+        <target>Pengintai</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_MAYDAY_SQUARE">
+        <source>MayDay Square</source>
+        <target>Alun-Alun MayDay</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_MAYDAY_SQUARE">
+        <source>After days of protests, we finally say enough is enough. Corruption and abuse must stop! Protesters of MayDay Square are ready to fight! Take command of the freedom fighters and assault the Presidental Palace.</source>
+        <target>Setelah berhari-hari protes, kami akhirnya mengatakan cukup sudah. Korupsi dan penyalahgunaan harus dihentikan! Para pengunjuk rasa di Alun-Alun MayDay siap bertarung! Ambil komando para pejuang kebebasan dan serbu Istana Kepresidenan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_INTRO">
+        <source>Sir! We are ready to begin the assault on the Presidental Palace! Our troops are awaiting your orders.</source>
+        <target>Pak! Kami siap untuk memulai penyerangan ke Istana Kepresidenan! Pasukan kami sedang menunggu perintah Anda.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_OBJECTIVE">
+        <source>This is the enemy HQ. We need to bring our soldiers there and capture it. Without central command, military forces guarding the Palace will disperse.</source>
+        <target>Ini adalah markas musuh. Kita harus membawa prajurit kita ke sana dan merebutnya. Tanpa komando pusat, pasukan militer yang menjaga Istana akan bubar.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_TOWER_1">
+        <source>We should also claim as many communication towers as possible to gain more resources for our operations. Those are crucial, as we need to pay for the deployment of new units, and movement of those already in the field.</source>
+        <target>Kita juga harus mengklaim menara komunikasi sebanyak mungkin untuk mendapatkan lebih banyak sumber daya untuk operasi kita. Itu sangat penting, karena kita perlu membayar untuk penyebaran unit baru, dan pergerakan mereka yang sudah ada di lapangan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_TOWER_2">
+        <source>Our enemy is already capturing nearby towers, we need to hurry and take them back to gain advantage!</source>
+        <target>Musuh kita sudah merebut menara terdekat, kita harus cepat dan merebutnya kembali untuk mendapatkan keuntungan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_SOLDIER_SHOUT">
+        <source>You are outnumbered! Stand down and let us get that corrupted bastard!</source>
+        <target>Jumlah kalian lebih sedikit! Mundur dan biarkan kami mendapatkan bajingan korup itu!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_ORDER">
+        <source>Fall back soldier!</source>
+        <target>Mundur prajurit!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_GUARD">
+        <source>Rebel scum!</source>
+        <target>Sampah pemberontak!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_COMMAND">
+        <source>Sir! Our forces are on the edge, we need you to take command!</source>
+        <target>Pak! Pasukan kita di ujung tanduk, kami butuh Anda untuk mengambil alih komando!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_NEARBY">
+        <source>Palace defence HQ is close. Let's take it!</source>
+        <target>Markas pertahanan istana sudah dekat. Ayo kita rebut!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_DEFEND">
+        <source>Sir! Enemy forces are getting dangerously close to our HQ! We should drive them back, otherwise we risk loosing this battle!</source>
+        <target>Pak! Pasukan musuh semakin dekat dengan markas kita! Kita harus memukul mundur mereka, jika tidak kita berisiko kalah dalam pertempuran ini!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_1_OFFICER_DEPLOY">
+        <source>Our forces have taken significant losses. We should deploy more soldiers from our HQ.</source>
+        <target>Pasukan kita telah menderita kerugian yang signifikan. Kita harus mengerahkan lebih banyak tentara dari markas kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_EASTERN_CITY">
+        <source>Eastern city</source>
+        <target>Kota Timur</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_EASTERN_CITY">
+        <source>Even though the events of MayDay Square allowed for a relatively peaceful change of government, there is still a lot of tension. We have reports of a group of militants loyal to the old president. Find and capture their center of operations before their actions cause civil war.</source>
+        <target>Meskipun peristiwa di Alun-Alun MayDay memungkinkan perubahan pemerintahan yang relatif damai, ketegangan masih tinggi. Kami mendapat laporan tentang sekelompok militan yang setia kepada presiden lama. Temukan dan rebut pusat operasi mereka sebelum tindakan mereka menyebabkan perang saudara.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_INTRO">
+        <source>Sir, recently we've been getting reports of increased militia activity in this region. We suspect there might be an organized command centre nearby. We should investigate.</source>
+        <target>Pak, baru-baru ini kami mendapatkan laporan tentang peningkatan aktivitas milisi di wilayah ini. Kami menduga mungkin ada pusat komando yang terorganisir di dekat sini. Kita harus menyelidikinya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS">
+        <source>Our forces are limited here. We should secure these infantry barracks. This building will enable us to deploy new soldiers for a lower price.</source>
+        <target>Pasukan kita terbatas di sini. Kita harus mengamankan barak infanteri ini. Bangunan ini akan memungkinkan kita untuk mengerahkan tentara baru dengan harga lebih murah.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_TIPOFF">
+        <source>Sir! We just got a tip off from local civilians indicating the location of the militia HQ. This is our objective.</source>
+        <target>Pak! Kami baru saja mendapat informasi dari warga sipil setempat yang menunjukkan lokasi markas milisi. Ini adalah tujuan kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_CAPTURED_1">
+        <source>Great work, Sir.</source>
+        <target>Kerja bagus, Pak.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_CAPTURED_2">
+        <source>Please be advised, that claiming buildings other than communication towers will require our soldier to stay inside, so make sure we always have enough infantry on the battlefield.</source>
+        <target>Harap diperhatikan, bahwa mengklaim bangunan selain menara komunikasi akan mengharuskan prajurit kita untuk tetap berada di dalam, jadi pastikan kita selalu memiliki cukup infanteri di medan perang.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_CAPTURED_3">
+        <source>There were some recruits waiting in the barracks. They have joined us.</source>
+        <target>Ada beberapa anggota baru yang menunggu di barak. Mereka telah bergabung dengan kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_TIP_1">
+        <source>Deploying more units will cost us resources, same as moving them. Spend them wisely.</source>
+        <target>Mengerahkan lebih banyak unit akan membebani kita sumber daya, sama seperti memindahkannya. Gunakan dengan bijak.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_TIP_2">
+        <source>In order to deploy a unit, dedicated spawn tile next to the building must be free. If one of your units occupies that tile, you have to move it first.</source>
+        <target>Untuk mengerahkan sebuah unit, ubin spawn khusus di sebelah gedung harus bebas. Jika salah satu unit Anda menempati ubin itu, Anda harus memindahkannya terlebih dahulu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_BARRACKS_TIP_3">
+        <source>You can use this to your advantage as well. Blocking spawn tiles next to enemy buildings will prevent them from deploying reinforcements.</source>
+        <target>Anda juga dapat menggunakan ini untuk keuntungan Anda. Memblokir ubin spawn di sebelah bangunan musuh akan mencegah mereka mengerahkan bala bantuan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_2_OFFICER_ALARM">
+        <source>They have found us! Raise the alarm!</source>
+        <target>Mereka telah menemukan kita! Bunyikan alarm!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_RIOTS">
+        <source>Riots</source>
+        <target>Kerusuhan</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_RIOTS">
+        <source>The current government came to power by attacking our dear leader! And they dare to call us the rebels! New authorities are still weak. We should use this opportunity to take over key administration offices. Our forces are standing by and awaiting your orders!</source>
+        <target>Pemerintah saat ini berkuasa dengan menyerang pemimpin kita tercinta! Dan mereka berani menyebut kita pemberontak! Otoritas baru masih lemah. Kita harus menggunakan kesempatan ini untuk mengambil alih kantor-kantor administrasi utama. Pasukan kita siap sedia dan menunggu perintah Anda!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OFFICER_INTRO_1">
+        <source>Welcome, Commander. Apologies for the delays.</source>
+        <target>Selamat datang, Komandan. Maaf atas keterlambatannya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OFFICER_INTRO_2">
+        <source>We finally managed to set up a camp. Wasn't easy to gather troops after we lost control of the army.</source>
+        <target>Kami akhirnya berhasil mendirikan sebuah kamp. Tidak mudah mengumpulkan pasukan setelah kami kehilangan kendali atas tentara.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OBJECTIVE">
+        <source>Our objective is to take the City Hall. Local defense forces are still disorganized. We should use this window of opportunity.</source>
+        <target>Tujuan kita adalah merebut Balai Kota. Pasukan pertahanan lokal masih belum terorganisir. Kita harus menggunakan kesempatan ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_TANK_1">
+        <source>Our militiants managed to steal a tank from nearby military base. It won't be long before someone notices.</source>
+        <target>Militan kami berhasil mencuri sebuah tank dari pangkalan militer terdekat. Tidak akan lama lagi seseorang akan menyadarinya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_TANK_2">
+        <source>Tanks are great at dealing with infantry - this one will be a valuble asset in this mission. Still, we need more if we are to succeed.</source>
+        <target>Tank sangat bagus dalam menghadapi infanteri - yang satu ini akan menjadi aset berharga dalam misi ini. Tetap saja, kita membutuhkan lebih banyak jika kita ingin berhasil.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_TANK_FACTORY">
+        <source>There is a tank fabrication facility nearby. Take it before the enemy uses those heavy units to stop our assault.</source>
+        <target>Ada fasilitas fabrikasi tank di dekat sini. Rebut sebelum musuh menggunakan unit-unit berat itu untuk menghentikan serangan kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OFFICER_FACTORY_CAP_1">
+        <source>Great work, Commander. Nothing will stop us now.</source>
+        <target>Kerja bagus, Komandan. Tidak ada yang akan menghentikan kita sekarang.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OFFICER_FACTORY_CAP_2">
+        <source>Local defense forces ordered a tank recently. I guess it is ours now.</source>
+        <target>Pasukan pertahanan lokal baru-baru ini memesan sebuah tank. Kurasa itu milik kita sekarang.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_3_OFFICER_FACTORY_AI">
+        <source>Commander, this is not good! Local forces have taken active control of this factory. We need to re-take it, or we will face a lot more tanks that we can handle.</source>
+        <target>Komandan, ini tidak baik! Pasukan lokal telah mengambil kendali aktif atas pabrik ini. Kita harus merebutnya kembali, atau kita akan menghadapi lebih banyak tank daripada yang bisa kita tangani.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_BASE_ASSAULT">
+        <source>Base Assault</source>
+        <target>Serangan Pangkalan</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_BASE_ASSAULT">
+        <source>Our recent victory gave us a foothold, but we can not stop there. A nearby military base has a lot of equipment we could use! We have to attack before they realise that they are no longer in control of this region.</source>
+        <target>Kemenangan kita baru-baru ini memberi kita pijakan, tetapi kita tidak bisa berhenti di situ. Pangkalan militer terdekat memiliki banyak peralatan yang bisa kita gunakan! Kita harus menyerang sebelum mereka menyadari bahwa mereka tidak lagi menguasai wilayah ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_INTRO_1">
+        <source>Great work on securing a foothold Commander, but our work here is not yet done.</source>
+        <target>Kerja bagus dalam mengamankan pijakan Komandan, tetapi pekerjaan kita di sini belum selesai.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_INTRO_2">
+        <source>If we are to secure our presence in this region, we have to take over the military base.</source>
+        <target>Jika kita ingin mengamankan kehadiran kita di wilayah ini, kita harus mengambil alih pangkalan militer.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_INTRO_3">
+        <source>Armoured units are available. Expect the enemy base to deploy tanks of their own!</source>
+        <target>Unit lapis baja tersedia. Harapkan pangkalan musuh untuk mengerahkan tank mereka sendiri!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_LANDLINE_1">
+        <source>We've managed to cut off their landline communications, Commander. We should be able to overwhelm them before they can even call for help.</source>
+        <target>Kami berhasil memutuskan komunikasi darat mereka, Komandan. Kita harus bisa mengalahkan mereka bahkan sebelum mereka bisa memanggil bantuan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_LANDLINE_2">
+        <source>Still, we should not waste any time. They can still use comm towers.</source>
+        <target>Tetap saja, kita tidak boleh membuang waktu. Mereka masih bisa menggunakan menara komunikasi.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_HELP_1">
+        <source>This is perimeter base! We are under attack! Repeat, we are under attack!</source>
+        <target>Ini pangkalan perimeter! Kami diserang! Ulangi, kami diserang!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_OFFICER_HELP_2">
+        <source>This is not good, they managed to restore communications. We have to prepare for reinforcements.</source>
+        <target>Ini tidak baik, mereka berhasil memulihkan komunikasi. Kita harus bersiap untuk bala bantuan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_RAPID_RESPONSE">
+        <source>Rapid response unit reporting in!</source>
+        <target>Unit respons cepat melapor!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_FORWARD_BARRACK">
+        <source>Capturing these forward barracks would allow us to bring soldiers to the front line more easily.</source>
+        <target>Merebut barak depan ini akan memungkinkan kita untuk membawa tentara ke garis depan dengan lebih mudah.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_GUARD_WARN">
+        <source>Rebels are getting close!</source>
+        <target>Pemberontak semakin dekat!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_COMM_CUT_1">
+        <source>With both towers near their HQ we knocked out their comms completely.</source>
+        <target>Dengan kedua menara di dekat markas mereka, kami melumpuhkan komunikasi mereka sepenuhnya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_COMM_CUT_2">
+        <source>What the... ? Command, come in. Anyone?</source>
+        <target>Apa-apaan ini...? Komando, masuk. Ada orang?</target>
+      </trans-unit>
+      <trans-unit id="MISSION_4_COMM_CUT_3">
+        <source>Good luck with that.</source>
+        <target>Semoga berhasil dengan itu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_PENINSULA">
+        <source>Peninsula</source>
+        <target>Semenanjung</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_PENINSULA">
+        <source>Days of fighting are finnally paying off. Now we have the support of our strong neighbouring country. We are ready to push the usurpers out of the peninsula. When we succeed, there will be no way for them to re-take it. This will be our greatest victory!</source>
+        <target>Hari-hari pertempuran akhirnya membuahkan hasil. Sekarang kita mendapat dukungan dari negara tetangga kita yang kuat. Kita siap untuk mengusir para perampas kekuasaan dari semenanjung. Ketika kita berhasil, tidak akan ada cara bagi mereka untuk merebutnya kembali. Ini akan menjadi kemenangan terbesar kita!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_OFFICER_INTRO_1">
+        <source>Government forces throughout the peninsula are busy fighting local militia.</source>
+        <target>Pasukan pemerintah di seluruh semenanjung sibuk memerangi milisi lokal.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_OFFICER_INTRO_2">
+        <source>With a coordinated push, we can take control of this land before they can re-organize.</source>
+        <target>Dengan dorongan terkoordinasi, kita dapat menguasai tanah ini sebelum mereka dapat mengatur kembali.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_OFFICER_INTRO_3">
+        <source>This base safeguards a strategic route connecting the peninsula with the rest of the country. Taking control of this facility will cut off all remaining army, forcing them to surrender.</source>
+        <target>Pangkalan ini menjaga rute strategis yang menghubungkan semenanjung dengan seluruh negara. Menguasai fasilitas ini akan memutus semua sisa tentara, memaksa mereka untuk menyerah.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_AIRPORT_NEAR_1">
+        <source>This is an airforce outpost meant to support the main base. Defences seem to be minimal, they did not expect an attack from this direction.</source>
+        <target>Ini adalah pos terdepan angkatan udara yang dimaksudkan untuk mendukung pangkalan utama. Pertahanannya tampaknya minimal, mereka tidak menyangka akan ada serangan dari arah ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_AIRPORT_NEAR_2">
+        <source>We should claim this building for additional air support.</source>
+        <target>Kita harus mengklaim bangunan ini untuk dukungan udara tambahan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_AIRPORT_CAP_1">
+        <source>There is more equipment here, than we expected. They probably regret loosing this outpost already.</source>
+        <target>Ada lebih banyak peralatan di sini, dari yang kami harapkan. Mereka mungkin sudah menyesal kehilangan pos terdepan ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_AIRPORT_CAP_2">
+        <source>Attack helicopter reporting for duty.</source>
+        <target>Helikopter serang siap bertugas.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_FLANK">
+        <source>With the right flank secured, we were able to bring in some reinforcements.</source>
+        <target>Dengan sayap kanan diamankan, kami dapat mendatangkan beberapa bala bantuan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_BLOCK_1">
+        <source>You will not get away with this, traitors!</source>
+        <target>Kalian tidak akan lolos begitu saja, para pengkhianat!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_5_BLOCK_2">
+        <source>It is you, who betrayed our great President! Arrest him!</source>
+        <target>Kaulah yang mengkhianati Presiden kita yang agung! Tangkap dia!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_RECAPTURE">
+        <source>Recapture</source>
+        <target>Perebutan Kembali</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_RECAPTURE">
+        <source>The situation is deteriorating quickly. We have to start pushing back, or we will lose all of our progress in this conflict. We are ready to liberate the city, where the rebels began their operations. Let us show them, and the people, that simple bandits are no match for our military.</source>
+        <target>Situasinya memburuk dengan cepat. Kita harus mulai melawan, atau kita akan kehilangan semua kemajuan kita dalam konflik ini. Kita siap untuk membebaskan kota, tempat para pemberontak memulai operasi mereka. Mari kita tunjukkan kepada mereka, dan rakyat, bahwa bandit biasa bukanlah tandingan militer kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_1">
+        <source>Welcome, Sir. As you may already know, recent setbacks have put us in an unfavourable position. We have to start pushing back.</source>
+        <target>Selamat datang, Pak. Seperti yang mungkin sudah Anda ketahui, kemunduran baru-baru ini telah menempatkan kita pada posisi yang tidak menguntungkan. Kita harus mulai melawan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_2">
+        <source>Our intel suggests, that this city is where it all started. Rebel activity appears to have lessened since the initial attack - they probably moved on.</source>
+        <target>Intel kami menunjukkan, bahwa kota inilah tempat semuanya dimulai. Aktivitas pemberontak tampaknya telah berkurang sejak serangan awal - mereka mungkin telah pindah.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_3">
+        <source>Still, we should not underestimate the garrison stationed here. Liberating this city will be an important step in our campaign.</source>
+        <target>Tetap saja, kita tidak boleh meremehkan garnisun yang ditempatkan di sini. Membebaskan kota ini akan menjadi langkah penting dalam kampanye kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_4">
+        <source>Sir, the base of operations is up and running.</source>
+        <target>Pak, basis operasi sudah aktif dan berjalan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_5">
+        <source>Good.</source>
+        <target>Bagus.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_6">
+        <source>Air support reporting in.</source>
+        <target>Dukungan udara melapor.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_INTRO_7">
+        <source>We've got decent amount of ground units, though our air capabilities are limited for this engagement. Use these assets well.</source>
+        <target>Kita punya cukup banyak unit darat, meskipun kemampuan udara kita terbatas untuk pertempuran ini. Gunakan aset-aset ini dengan baik.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_APP_BASE">
+        <source>Sir, this looks like an abandoned rebel encampment. It seems they had no way of moving all this equipment, so they just left it.</source>
+        <target>Pak, ini sepertinya perkemahan pemberontak yang ditinggalkan. Sepertinya mereka tidak punya cara untuk memindahkan semua peralatan ini, jadi mereka meninggalkannya begitu saja.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_APP_TOWERS_1">
+        <source>There are two comm towers on the left flank.</source>
+        <target>Ada dua menara komunikasi di sayap kiri.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_APP_TOWERS_2">
+        <source>There may be some AA emplacements in the area, but if we capture those towers, we will be able to guide in more air support safely.</source>
+        <target>Mungkin ada beberapa penempatan AA di area tersebut, tetapi jika kita merebut menara-menara itu, kita akan dapat memandu lebih banyak dukungan udara dengan aman.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_APP_TOWERS_3">
+        <source>Anti-tank team has arrived.</source>
+        <target>Tim anti-tank telah tiba.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_PATROL_1">
+        <source>Patrol squad reporting back.</source>
+        <target>Pasukan patroli melapor kembali.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_PATROL_2">
+        <source>No rest for you, we are under attack!</source>
+        <target>Tidak ada istirahat untukmu, kita diserang!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_RED_HQ_1">
+        <source>We are loosing ground! Warn the Commander!</source>
+        <target>Kita kehilangan wilayah! Peringatkan Komandan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_RED_HQ_2">
+        <source>Yes Sir!</source>
+        <target>Siap Pak!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_6_RED_HQ_3">
+        <source>He got away. Doesn't matter, let's focus on the mission at hand.</source>
+        <target>Dia lolos. Tidak masalah, mari kita fokus pada misi yang ada.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_BASE_DEFENCE">
+        <source>Base Defence</source>
+        <target>Pertahanan Pangkalan</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_BASE_DEFENCE">
+        <source>Alert! Rebels are attacking one of our military bases in the eastern region! We can't allow them to capture any more of our assets. Defend the base and destroy the rebel forces in the region!</source>
+        <target>Peringatan! Pemberontak menyerang salah satu pangkalan militer kita di wilayah timur! Kita tidak bisa membiarkan mereka merebut aset kita lagi. Pertahankan pangkalan dan hancurkan pasukan pemberontak di wilayah itu!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_INTRO_1">
+        <source>Alarm! Unidentified troops spotted near the base perimeter!</source>
+        <target>Alarm! Pasukan tak dikenal terlihat di dekat perimeter pangkalan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_INTRO_2">
+        <source>They spotted us! Commence the attack!</source>
+        <target>Mereka melihat kita! Mulai serangan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_INTRO_3">
+        <source>Sir! We had reports of enemy movements in the area, but we did not expect them to organize so fast.</source>
+        <target>Pak! Kami mendapat laporan pergerakan musuh di daerah itu, tetapi kami tidak menyangka mereka akan berorganisasi begitu cepat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_INTRO_4">
+        <source>And they are taking the auxilary barracks! Tank factory is probably being attacked as well. We have to protect our flanks.</source>
+        <target>Dan mereka merebut barak tambahan! Pabrik tank mungkin juga sedang diserang. Kita harus melindungi sayap kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_LEFT_CLAIMED">
+        <source>Left flank secure.</source>
+        <target>Sayap kiri aman.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_RIGHT_CLAIMED">
+        <source>Right flank secure.</source>
+        <target>Sayap kanan aman.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_TRAP">
+        <source>We've got you now!</source>
+        <target>Sekarang kau kena!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_BASE_1">
+        <source>You might think you are winning, but this is only a minor setback. We will be back, and in greater numbers!</source>
+        <target>Kau mungkin berpikir kau menang, tapi ini hanya kemunduran kecil. Kami akan kembali, dan dalam jumlah yang lebih besar!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_BASE_2">
+        <source>We will see about that.</source>
+        <target>Kita lihat saja nanti.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_TOWERS_1">
+        <source>We've managed to take over enemy communication line and intercept some chatter about plans on attacking an airport.</source>
+        <target>Kami berhasil mengambil alih jalur komunikasi musuh dan menyadap beberapa obrolan tentang rencana penyerangan bandara.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_7_TOWERS_2">
+        <source>This cannot be good...</source>
+        <target>Ini tidak mungkin baik...</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_AIRPORT_PT_1">
+        <source>Airport Pt.1</source>
+        <target>Bandara Bag.1</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_AIRPORT_PT_1">
+        <source>Fighting between our militia and the government forces is not going as well as we had hoped. We need to show the world we are not giving up just yet. The nearby airport is not of huge strategic importance, but capturing it will be our manifestation of power!</source>
+        <target>Pertempuran antara milisi kita dan pasukan pemerintah tidak berjalan sebaik yang kita harapkan. Kita perlu menunjukkan kepada dunia bahwa kita belum menyerah. Bandara terdekat tidak memiliki kepentingan strategis yang besar, tetapi merebutnya akan menjadi manifestasi kekuatan kita!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_INTRO_1">
+        <source>Forward camp is ready, Commander.</source>
+        <target>Kamp depan siap, Komandan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_INTRO_2">
+        <source>Commander, let's get going.</source>
+        <target>Komandan, ayo berangkat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_INTRO_3">
+        <source>This is the local airport. It is not of high strategic importance, but loosing it will strike fear into enemies hearts.</source>
+        <target>Ini adalah bandara lokal. Ini tidak terlalu penting secara strategis, tetapi kehilangannya akan menimbulkan ketakutan di hati musuh.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_FACTORIES">
+        <source>Reiconessanse reports multiple tank factories in the area. Those helicopters will come really handy.</source>
+        <target>Pengintaian melaporkan beberapa pabrik tank di area tersebut. Helikopter-helikopter itu akan sangat berguna.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_APP_AIRPORT">
+        <source>Target spotted.</source>
+        <target>Target terlihat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_CAP_AIRPORT_1">
+        <source>Objective achieved.</source>
+        <target>Tujuan tercapai.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_CAP_AIRPORT_2">
+        <source>Now let's clear this area of enemy units, we can't risk loosing this terminal.</source>
+        <target>Sekarang mari kita bersihkan area ini dari unit musuh, kita tidak bisa mengambil risiko kehilangan terminal ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_BUY_HELI_1">
+        <source>Let's clear those tanks.</source>
+        <target>Ayo kita hancurkan tank-tank itu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_BUY_HELI_2">
+        <source>Commander, while searching the airport we have found some documents left by the enemy officers.</source>
+        <target>Komandan, saat menggeledah bandara kami menemukan beberapa dokumen yang ditinggalkan oleh perwira musuh.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_8_BUY_HELI_3">
+        <source>It is some kind of flight schedule, probably for military supplies. We will make good use of this.</source>
+        <target>Ini semacam jadwal penerbangan, mungkin untuk pasokan militer. Kita akan memanfaatkan ini dengan baik.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_AIRPLANE">
+        <source>Airplane</source>
+        <target>Pesawat terbang</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_AIRPLANE">
+        <source>Thanks to the airport equipment, we have intercepted communications about an important military aircraft flying over the area. We have identified the perfect spot to launch missiles from, but it is guarded by the. Muster your forces and get into position to shoot down the transport!</source>
+        <target>Berkat peralatan bandara, kami telah menyadap komunikasi tentang sebuah pesawat militer penting yang terbang di atas area tersebut. Kami telah mengidentifikasi tempat yang tepat untuk meluncurkan misil, tetapi dijaga oleh musuh. Kerahkan pasukanmu dan bersiaplah untuk menembak jatuh transportasi itu!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_INTRO_1">
+        <source>If the information we aquired is correct, there should be a military plane flying over this area soon.</source>
+        <target>Jika informasi yang kami peroleh benar, seharusnya ada pesawat militer yang terbang di atas area ini segera.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_INTRO_2">
+        <source>We have identified best position to set up our AA emplacement, but it is currently occupied by the enemy.</source>
+        <target>Kami telah mengidentifikasi posisi terbaik untuk memasang penempatan AA kami, tetapi saat ini ditempati oleh musuh.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_INTRO_3">
+        <source>Our camp is still being developed. We have to capture facilities available throughout the city to bolster our forces.</source>
+        <target>Kamp kami masih dalam pengembangan. Kita harus merebut fasilitas yang tersedia di seluruh kota untuk memperkuat pasukan kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN2_1">
+        <source>Long range radar that we captured on the peninsula just reported it is tracking a vessel coming from the west.</source>
+        <target>Radar jarak jauh yang kita rebut di semenanjung baru saja melaporkan bahwa ia melacak sebuah kapal yang datang dari barat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN2_2">
+        <source>We still have plenty of time, but we have to finish our mission before the window of opportunity closes.</source>
+        <target>Kita masih punya banyak waktu, tapi kita harus menyelesaikan misi kita sebelum jendela kesempatan tertutup.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN10_1">
+        <source>The tracked vessel is closing in, we should hurry.</source>
+        <target>Kapal yang dilacak semakin dekat, kita harus bergegas.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN10_2">
+        <source>We are also tracking a group of attack helicopters. They might be heading your way.</source>
+        <target>Kami juga melacak sekelompok helikopter serang. Mereka mungkin menuju ke arahmu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN15_1">
+        <source>The transport will be passing over any minute. We can still catch it.</source>
+        <target>Transportasi akan lewat sebentar lagi. Kita masih bisa menangkapnya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN15_2">
+        <source>Eagle Squad ready for patrol duty... What is this? The base is under siege! Attack formation!</source>
+        <target>Pasukan Elang siap untuk tugas patroli... Apa ini? Pangkalan terkepung! Formasi serang!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN18_1">
+        <source>That airplane is already past our position. We have to prepare the attack now.</source>
+        <target>Pesawat itu sudah melewati posisi kita. Kita harus mempersiapkan serangan sekarang.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_TURN20_1">
+        <source>The target is out of reach. We have failed, Commander.</source>
+        <target>Target di luar jangkauan. Kita telah gagal, Komandan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_9_APP_HQ">
+        <source>Closing in on the designated area. AA guns ready for deployment.</source>
+        <target>Mendekati area yang ditentukan. Senjata AA siap untuk digunakan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_FIELD_COMMAND">
+        <source>Field Command</source>
+        <target>Komando Lapangan</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_FIELD_COMMAND">
+        <source>These separatists just shot down a civilian airplane, hundreds of people died! Their violence has to stop! Our scouts have found the enemy field command center for this region. Our resources are limited, but we should be able to gather more men and tanks in the nearby city.</source>
+        <target>Para separatis ini baru saja menembak jatuh sebuah pesawat sipil, ratusan orang tewas! Kekerasan mereka harus dihentikan! Pasukan pengintai kami telah menemukan pusat komando lapangan musuh untuk wilayah ini. Sumber daya kita terbatas, tetapi kita seharusnya dapat mengumpulkan lebih banyak orang dan tank di kota terdekat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_1">
+        <source>Those fanatics just destroyed a civilian plane full of people! With ground-to-air missiles! Where did they even got this kind of equipment?</source>
+        <target>Orang-orang fanatik itu baru saja menghancurkan sebuah pesawat sipil yang penuh dengan orang! Dengan rudal darat-ke-udara! Dari mana mereka mendapatkan peralatan semacam ini?</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_2">
+        <source>We have to stop this madness before more people suffer.</source>
+        <target>Kita harus menghentikan kegilaan ini sebelum lebih banyak orang menderita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_3">
+        <source>Recon, do you have anything for us?</source>
+        <target>Pengintai, apakah kamu punya sesuatu untuk kami?</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_4">
+        <source>Local command center located, Sir. Attempting infiltration...</source>
+        <target>Pusat komando lokal ditemukan, Pak. Mencoba infiltrasi...</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_5">
+        <source>Not so fast!</source>
+        <target>Tidak secepat itu!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_6">
+        <source>We have been spotted! I repeat...</source>
+        <target>Kami telah terlihat! Saya ulangi...</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_INTRO_7">
+        <source>Now they know we're here. Looks like we have to assault this base old-fashioned way.</source>
+        <target>Sekarang mereka tahu kita di sini. Sepertinya kita harus menyerang pangkalan ini dengan cara kuno.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_TOWER_1">
+        <source>Comms established. Requesting backup.</source>
+        <target>Komunikasi terjalin. Meminta cadangan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_TOWER_2">
+        <source>Somebody called?</source>
+        <target>Ada yang menelepon?</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_HQ_1">
+        <source>Closing in on enemy position. They are surrounded by mountains, nowhere to go!</source>
+        <target>Mendekati posisi musuh. Mereka dikelilingi oleh pegunungan, tidak ada tempat untuk pergi!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_10_HQ_2">
+        <source>Enemy reinforcements detected!</source>
+        <target>Bala bantuan musuh terdeteksi!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_AIRPORT_PT_2">
+        <source>Airport Pt.2</source>
+        <target>Bandara Bag.2</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_AIRPORT_PT_2">
+        <source>The rebel forces have scattered after losing their local HQ. The airport is still heavily guarded, but they will not receive any new reinforcements anytime soon. Our Recon-Team managed to set up a small base.  We need to attack before they can pick themselves up!</source>
+        <target>Pasukan pemberontak telah terpencar setelah kehilangan markas lokal mereka. Bandara masih dijaga ketat, tetapi mereka tidak akan menerima bala bantuan baru dalam waktu dekat. Tim Pengintai kami berhasil mendirikan pangkalan kecil. Kita harus menyerang sebelum mereka bisa bangkit kembali!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_INTRO_1">
+        <source>Welcome back, Sir.  We have finally got a green light on re-taking that airport.</source>
+        <target>Selamat datang kembali, Pak. Kami akhirnya mendapat lampu hijau untuk merebut kembali bandara itu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_INTRO_2">
+        <source>This area is highly contested. Luckily, our recent victories forced our foe to re-group, so they can't expect help anytime soon.</source>
+        <target>Area ini sangat diperebutkan. Untungnya, kemenangan kita baru-baru ini memaksa musuh kita untuk berkumpul kembali, sehingga mereka tidak dapat mengharapkan bantuan dalam waktu dekat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_RECON_1">
+        <source>This is recon. We have located enemy HQ. Looks like they are fortifying their position.</source>
+        <target>Ini pengintaian. Kami telah menemukan markas musuh. Sepertinya mereka sedang memperkuat posisi mereka.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_RECON_2">
+        <source>Moving out before they spot us.</source>
+        <target>Bergerak keluar sebelum mereka melihat kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_CAP_TOWER">
+        <source>Sir, the forest road is blocked. It looks like we could clear it out if we brought a tank here.</source>
+        <target>Pak, jalan hutan diblokir. Sepertinya kita bisa membersihkannya jika kita membawa tank ke sini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_11_TANK">
+        <source>Load main gun! Fire!</source>
+        <target>Isi senjata utama! Tembak!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_CONVOY">
+        <source>Convoy</source>
+        <target>Konvoi</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_CONVOY">
+        <source>In this time of war many people are suffering. Our kind neighbour offered to send us a humanitarian convoy with food, water and medicine. The government does not believe in our good intentions, and won't allow the trucks to pass. We have to clear the way!</source>
+        <target>Di masa perang ini banyak orang menderita. Tetangga kita yang baik hati menawarkan untuk mengirimi kita konvoi kemanusiaan dengan makanan, air, dan obat-obatan. Pemerintah tidak percaya pada niat baik kita, dan tidak akan mengizinkan truk-truk itu lewat. Kita harus membuka jalan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_INTRO_1">
+        <source>The transports will be ready to go very soon.</source>
+        <target>Transportasi akan segera siap berangkat.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_INTRO_2">
+        <source>Nearby city really needs what's in these trucks. We have to secure the road.</source>
+        <target>Kota terdekat sangat membutuhkan apa yang ada di dalam truk-truk ini. Kita harus mengamankan jalan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_INTRO_3">
+        <source>Capturing and holding these towers along the way should allow us to go safely.</source>
+        <target>Merebut dan menahan menara-menara ini di sepanjang jalan akan memungkinkan kita untuk pergi dengan aman.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_CROSSROAD_1">
+        <source>This mountain pass is vital to our operation. We have to hold this position.</source>
+        <target>Jalur gunung ini sangat penting untuk operasi kita. Kita harus mempertahankan posisi ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_CROSSROAD_2">
+        <source>The enemy base is going to put a pressure on us from the flank. Take it out if you can, but do not compromise our mission, Commander.</source>
+        <target>Pangkalan musuh akan menekan kita dari sayap. Hancurkan jika kau bisa, tapi jangan kompromikan misi kita, Komandan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_TOWERS_1">
+        <source>Congratulations on securing the route. Now we should be able to co-ordinate our forces and defend the convoy.</source>
+        <target>Selamat atas pengamanan rute. Sekarang kita harus bisa mengoordinasikan pasukan kita dan mempertahankan konvoi.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_12_TOWERS_2">
+        <source>They will not stop us.</source>
+        <target>Mereka tidak akan menghentikan kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_CRASH_SITE">
+        <source>Crash Site</source>
+        <target>Lokasi Kecelakaan</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_CRASH_SITE">
+        <source>The plane we attacked went down deep within the forest. We must not allow anyone to reach the crash site. Without the wreckage, no one will be able to prove by whom and how it was destroyed. International investigators are on their way, we have to stop them.</source>
+        <target>Pesawat yang kita serang jatuh jauh di dalam hutan. Kita tidak boleh membiarkan siapa pun mencapai lokasi kecelakaan. Tanpa puing-puing, tidak ada yang bisa membuktikan oleh siapa dan bagaimana itu dihancurkan. Penyelidik internasional sedang dalam perjalanan, kita harus menghentikan mereka.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_INTRO_1">
+        <source>Commander, I assume you already heard about our little... mistake.</source>
+        <target>Komandan, saya berasumsi Anda sudah mendengar tentang... kesalahan kecil kita.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_INTRO_2">
+        <source>As it turns out, that military transport we shot down wasn't a military vessel at all.</source>
+        <target>Ternyata, transportasi militer yang kita tembak jatuh itu sama sekali bukan kapal militer.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_INTRO_3">
+        <source>We have managed to blockade the crash site for now, but international investigators are on their way.</source>
+        <target>Kami berhasil memblokade lokasi kecelakaan untuk saat ini, tetapi penyelidik internasional sedang dalam perjalanan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_INTRO_4">
+        <source>Secure this position, Commander.</source>
+        <target>Amankan posisi ini, Komandan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_TURN3_1">
+        <source>Armoured column, move forward.</source>
+        <target>Kolom lapis baja, maju.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_TURN3_2">
+        <source>Get out of our way, and we might just let you withdraw your forces... for now.</source>
+        <target>Minggir dari jalan kami, dan kami mungkin akan membiarkanmu menarik pasukanmu... untuk saat ini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_TURN3_3">
+        <source>Save your breath.</source>
+        <target>Simpan napasmu.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_13_HALF_WAY">
+        <source>Sir, we have scouted an airfield near the enemy HQ. We have to be cautious when pushing with tanks.</source>
+        <target>Pak, kami telah mengintai sebuah lapangan terbang di dekat markas musuh. Kita harus berhati-hati saat mendorong dengan tank.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_TITLE_AIRPORT_PT_3">
+        <source>Airport Pt.3</source>
+        <target>Bandara Bag.3</target>
+      </trans-unit>
+      <trans-unit id="MISSION_DESR_AIRPORT_PT_3">
+        <source>It has been months since we started fighting over this wretched airport. It is hardly an airport anymore either, with everything reduced to rubble - the terminal, the tower, the surrounding city. Even so, it is still a symbol of who has the upper hand here, and it should be ours!</source>
+        <target>Sudah berbulan-bulan sejak kita mulai memperebutkan bandara terkutuk ini. Ini juga bukan lagi bandara, dengan semuanya menjadi puing-puing - terminal, menara, kota sekitarnya. Meski begitu, itu masih merupakan simbol siapa yang lebih unggul di sini, dan itu harus menjadi milik kita!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_INTRO_1">
+        <source>My apologies, Commander. We lost the airport you previously secured. Enemy attack was switft and devastating.</source>
+        <target>Maafkan saya, Komandan. Kami kehilangan bandara yang sebelumnya Anda amankan. Serangan musuh cepat dan menghancurkan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_INTRO_2">
+        <source>We don't have much footing here. Taking control of the barracks building on the other side of the forest is a good start.</source>
+        <target>Kami tidak punya banyak pijakan di sini. Mengambil kendali gedung barak di seberang hutan adalah awal yang baik.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_INTRO_3">
+        <source>I've dispatched a couple of small squads to scout out the battlefield ahead.</source>
+        <target>Saya telah mengirim beberapa pasukan kecil untuk mengintai medan perang di depan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN2_1">
+        <source>We have some initial reports.</source>
+        <target>Kami punya beberapa laporan awal.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN2_2">
+        <source>The old encampment is ruined, though some light weapons for infantry can be salvaged for training more troops.</source>
+        <target>Perkemahan tua itu hancur, meskipun beberapa senjata ringan untuk infanteri dapat diselamatkan untuk melatih lebih banyak pasukan.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN2_3">
+        <source>Tank factory has been abandoned when it lost power, but we should be able to restore basic functions.</source>
+        <target>Pabrik tank telah ditinggalkan ketika kehilangan daya, tetapi kita seharusnya dapat memulihkan fungsi-fungsi dasar.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN3_1">
+        <source>Most of the city is completely ruined.</source>
+        <target>Sebagian besar kota benar-benar hancur.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN3_2">
+        <source>Airport buildings have been blown up, not much left in there. Military hangars seem fairly untouched, we should be able to use them.</source>
+        <target>Bangunan bandara telah diledakkan, tidak banyak yang tersisa di sana. Hanggar militer tampaknya tidak tersentuh, kita seharusnya bisa menggunakannya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN4_1">
+        <source>We have visual confirmation on one of the enemy encampments. Looks like their command centre is not here.</source>
+        <target>Kami memiliki konfirmasi visual di salah satu perkemahan musuh. Sepertinya pusat komando mereka tidak ada di sini.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN4_2">
+        <source>I think they spotted us, falling back.</source>
+        <target>Kurasa mereka melihat kita, mundur.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TURN4_3">
+        <source>It's a trap!</source>
+        <target>Ini jebakan!</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TRAP_1">
+        <source>Commander, we have found explosive traps in most of the buildings. They really didn't want us to capture it.</source>
+        <target>Komandan, kami telah menemukan jebakan peledak di sebagian besar bangunan. Mereka benar-benar tidak ingin kita merebutnya.</target>
+      </trans-unit>
+      <trans-unit id="MISSION_14_TRAP_2">
+        <source>And it seems, that explosions alerted them. Expect increased resistance.</source>
+        <target>Dan sepertinya, ledakan itu memperingatkan mereka. Harapkan perlawanan yang meningkat.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

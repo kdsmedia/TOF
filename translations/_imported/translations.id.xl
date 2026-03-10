@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="godot" target-language="id">
+    <body>
+      <trans-unit id="TIP_HEADER">
+        <source>Did you know that...</source>
+        <target>Tahukah kamu bahwa...</target>
+      </trans-unit>
+      <trans-unit id="TIP_1">
+        <source>Each unit can attack only once a turn</source>
+        <target>Setiap unit hanya bisa menyerang sekali giliran</target>
+      </trans-unit>
+      <trans-unit id="TIP_2">
+        <source>Units have weaknesses and advantages - only troops can capture buildings but they have almost no chance against tanks and tanks can’t attack helis</source>
+        <target>Unit memiliki kelemahan dan keunggulan - hanya pasukan yang dapat merebut gedung tetapi mereka hampir tidak memiliki peluang melawan tank dan tank tidak dapat menyerang helikopter</target>
+      </trans-unit>
+      <trans-unit id="TIP_3">
+        <source>You can deploy soldiers in HQ but it is cheaper to do so in the barracks</source>
+        <target>Anda dapat mengerahkan tentara di HQ tetapi lebih murah untuk melakukannya di barak</target>
+      </trans-unit>
+      <trans-unit id="TIP_4">
+        <source>A unit loses all its remaining AP for the turn when capturing a Tower</source>
+        <target>Sebuah unit kehilangan semua AP yang tersisa untuk giliran saat merebut Menara</target>
+      </trans-unit>
+      <trans-unit id="TIP_5">
+        <source>All production buildings require a soldier to maintain it - capturing them will cost you a soldier unit</source>
+        <target>Semua bangunan produksi membutuhkan seorang prajurit untuk memeliharanya - merebutnya akan membebani Anda satu unit prajurit</target>
+      </trans-unit>
+      <trans-unit id="TIP_6">
+        <source>HQ and captured Towers or Airports will produce cash in every turn</source>
+        <target>HQ dan Menara atau Bandara yang direbut akan menghasilkan uang di setiap giliran</target>
+      </trans-unit>
+      <trans-unit id="TIP_7">
+        <source>Cash can be spent for deploying units and movement</source>
+        <target>Uang dapat dihabiskan untuk mengerahkan unit dan pergerakan</target>
+      </trans-unit>
+      <trans-unit id="TIP_8">
+        <source>Use your cash wisely - a big army will be slower and less effective than a small squad</source>
+        <target>Gunakan uang Anda dengan bijak - pasukan besar akan lebih lambat dan kurang efektif daripada pasukan kecil</target>
+      </trans-unit>
+      <trans-unit id="TIP_9">
+        <source>It’s never a good idea to send a unit onto the battlefield alone</source>
+        <target>Tidak pernah merupakan ide yang baik untuk mengirim satu unit ke medan perang sendirian</target>
+      </trans-unit>
+      <trans-unit id="TIP_10">
+        <source>Mixing unit types in squads gives you a strategic advantage</source>
+        <target>Mencampur jenis unit dalam pasukan memberi Anda keuntungan strategis</target>
+      </trans-unit>
+      <trans-unit id="TIP_11">
+        <source>You cannot deploy a unit when the spawning point is blocked and neither can the enemy - block enemy factories with your units</source>
+        <target>Anda tidak dapat mengerahkan unit saat titik spawn diblokir dan musuh juga tidak bisa - blokir pabrik musuh dengan unit Anda</target>
+      </trans-unit>
+      <trans-unit id="TIP_12">
+        <source>Units can attack only adjacent tiles - so when your target is far away you should first move your unit closer</source>
+        <target>Unit hanya dapat menyerang ubin yang berdekatan - jadi ketika target Anda jauh, Anda harus terlebih dahulu memindahkan unit Anda lebih dekat</target>
+      </trans-unit>
+      <trans-unit id="TIP_13">
+        <source>HQ is the most valuable building in game - if you capture the enemy HQ you will win the game</source>
+        <target>HQ adalah bangunan paling berharga dalam game - jika Anda merebut HQ musuh, Anda akan memenangkan game</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP">
+        <source>WORKSHOP</source>
+        <target>LOKAKARYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAIN_MENU">
+        <source>MAIN MENU</source>
+        <target>MENU UTAMA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_START_TURN">
+        <source>START TURN</source>
+        <target>MULAI GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CAMPAIGN">
+        <source>CAMPAIGN</source>
+        <target>KAMPANYE</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SKIRMISH">
+        <source>SKIRMISH</source>
+        <target>PERTEMPURAN KECIL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CONFIRM">
+        <source>CONFIRM</source>
+        <target>KONFIRMASI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UNIT_ATTACK">
+        <source>attack</source>
+        <target>serang</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UNIT_HEALTH">
+        <source>health</source>
+        <target>kesehatan</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UNIT_RANGE">
+        <source>range</source>
+        <target>jangkauan</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING_HQ">
+        <source>HQ</source>
+        <target>MARKAS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING_BARRACKS">
+        <source>BARRACKS</source>
+        <target>BARAK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING_FACTORY">
+        <source>FACTORY</source>
+        <target>PABRIK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING_AIRPORT">
+        <source>AIRPORT</source>
+        <target>BANDARA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING_GSM_TOWER">
+        <source>GSM TOWER</source>
+        <target>MENARA GSM</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REMOTE">
+        <source>REMOTE</source>
+        <target>JARAK JAUH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_LOCAL">
+        <source>LOCAL</source>
+        <target>LOKAL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_OFF">
+        <source>OFF</source>
+        <target>MATI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ON">
+        <source>ON</source>
+        <target>NYALA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GAME">
+        <source>GAME</source>
+        <target>PERMAINAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RESUME">
+        <source>RESUME</source>
+        <target>LANJUTKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_EASY">
+        <source>EASY</source>
+        <target>MUDAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NORMAL">
+        <source>NORMAL</source>
+        <target>NORMAL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAPS_CREATED">
+        <source>MAPS CREATED</source>
+        <target>PETA DIBUAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_COMPLETED">
+        <source>COMPLETED</source>
+        <target>SELESAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEXT">
+        <source>NEXT</source>
+        <target>BERIKUTNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DELETE_MODE">
+        <source>DELETE</source>
+        <target>HAPUS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TURNS_CAP:">
+        <source>TURNS CAP:</source>
+        <target>BATAS GILIRAN:</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BACK">
+        <source>> BACK</source>
+        <target>> KEMBALI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SELECTED_MAP">
+        <source>SELECTED MAP:</source>
+        <target>PETA TERPILIH:</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TURNS_CAP">
+        <source>TURNS CAP:</source>
+        <target>BATAS GILIRAN:</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLAY">
+        <source>PLAY</source>
+        <target>MAINKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CPU">
+        <source>CPU</source>
+        <target>CPU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_HUMAN">
+        <source>HUMAN</source>
+        <target>MANUSIA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ATTACK">
+        <source>ATTACK</source>
+        <target>SERANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_HEALTH_MAX">
+        <source>HEALTH / MAX</source>
+        <target>KESEHATAN / MAKS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_HEALTH">
+        <source>HEALTH</source>
+        <target>KESEHATAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ACTION_SLOTS">
+        <source>ACTION SLOTS</source>
+        <target>SLOT AKSI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_INFANTRY">
+        <source>INFANTRY</source>
+        <target>INFANTERI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UNIT_HELI">
+        <source>HELI</source>
+        <target>HELI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RANGE">
+        <source>RANGE</source>
+        <target>JANGKAUAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DEPLOY_PRICE">
+        <source>DEPLOY PRICE</source>
+        <target>HARGA PENGERAHAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DEPLOY">
+        <source>DEPLOY</source>
+        <target>KERAHKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_END">
+        <source>END</source>
+        <target>AKHIRI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TURN">
+        <source>TURN</source>
+        <target>GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEW_TURN">
+        <source>NEW TURN</source>
+        <target>GILIRAN BARU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ACTION_POINTS">
+        <source>ACTION POINTS</source>
+        <target>POIN AKSI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UNIT">
+        <source>UNIT</source>
+        <target>UNIT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BUILDING">
+        <source>BUILDING</source>
+        <target>BANGUNAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEXT_TURN_GAIN">
+        <source>NEXT TURN GAIN</source>
+        <target>KEUNTUNGAN GILIRAN BERIKUTNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAP_NAME">
+        <source>MAP NAME</source>
+        <target>NAMA PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SELECT_UNIT">
+        <source>SELECT UNIT</source>
+        <target>PILIH UNIT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLEASE_WAIT">
+        <source>PLEASE WAIT...</source>
+        <target>MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SOUND_EFFECTS">
+        <source>SOUND EFFECTS</source>
+        <target>EFEK SUARA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MUSIC">
+        <source>MUSIC</source>
+        <target>MUSIK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CAMERA_SHAKE">
+        <source>CAMERA SHAKE</source>
+        <target>GONCANGAN KAMERA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_AUTO_FOLLOW">
+        <source>CAMERA AUTO FOLLOW</source>
+        <target>IKUTI KAMERA OTOMATIS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ZOOM_LEVEL">
+        <source>ZOOM LEVEL</source>
+        <target>TINGKAT ZOOM</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BIGGER">
+        <source>BIGGER</source>
+        <target>LEBIH BESAR</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SMALLER">
+        <source>SMALLER</source>
+        <target>LEBIH KECIL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WINDOW">
+        <source>WINDOW</source>
+        <target>JENDELA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_FULL_SCREEN">
+        <source>FULL SCREEN</source>
+        <target>LAYAR PENUH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DIFFICULTY">
+        <source>DIFFICULTY</source>
+        <target>KESULITAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WINS">
+        <source>WINS</source>
+        <target>MENANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SETTINGS">
+        <source>SETTINGS</source>
+        <target>PENGATURAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BACK">
+        <source>BACK</source>
+        <target>KEMBALI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_QUIT_GAME">
+        <source>QUIT GAME</source>
+        <target>KELUAR DARI PERMAINAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RUN_DEMO">
+        <source>RUN DEMO</source>
+        <target>JALANKAN DEMO</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SKIRMISH">
+        <source>SKIRMISH</source>
+        <target>PERTEMPURAN KECIL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAP EDITOR">
+        <source>MAP EDITOR</source>
+        <target>EDITOR PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CAMPAIGN">
+        <source>CAMPAIGN</source>
+        <target>KAMPANYE</target>
+      </trans-unit>
+      <trans-unit id="LABEL_COMPLETED">
+        <source>COMPLETED</source>
+        <target>SELESAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAPS_CREATED">
+        <source>MAPS CREATED</source>
+        <target>PETA DIBUAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ONLINE">
+        <source>ONLINE</source>
+        <target>ONLINE</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MISSION">
+        <source>MISSION</source>
+        <target>MISI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BLUE_TEAM">
+        <source>BLUE TEAM</source>
+        <target>TIM BIRU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RED_TEAM">
+        <source>RED TEAM</source>
+        <target>TIM MERAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_START">
+        <source>START</source>
+        <target>MULAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MISSION_COMPLETED">
+        <source>MISSION COMPLETED</source>
+        <target>MISI SELESAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PREVIOUS">
+        <source>PREVIOUS</source>
+        <target>SEBELUMNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEXT">
+        <source>NEXT</source>
+        <target>BERIKUTNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NAME">
+        <source>NAME</source>
+        <target>NAMA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_UNITS">
+        <source>UNITS</source>
+        <target>UNIT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_BUILDINGS">
+        <source>BUILDINGS</source>
+        <target>BANGUNAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_TERRAIN">
+        <source>TERRAIN</source>
+        <target>MEDAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FILES_MANAGER">
+        <source>FILES MANAGER</source>
+        <target>MANAJER FILE</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_PICK_MAP">
+        <source>PICK MAP</source>
+        <target>PILIH PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FILE_SAVED">
+        <source>FILE SAVED</source>
+        <target>FILE TERSIMPAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_TOOLBOX">
+        <source>TOOLBOX</source>
+        <target>KOTAK ALAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_UNDO_BUILD">
+        <source>UNDO BUILD</source>
+        <target>URUNGKAN PEMBANGUNAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_MOVE_MAP">
+        <source>MOVE MAP</source>
+        <target>PINDAHKAN PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_BUILD_TERRAIN">
+        <source>BUILD TERRAIN</source>
+        <target>BANGUN MEDAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_SELECTED_TOOL">
+        <source>SELECTED TOOL</source>
+        <target>ALAT TERPILIH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CREATE">
+        <source>CREATE</source>
+        <target>BUAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_SIZE">
+        <source>SIZE</source>
+        <target>UKURAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CLEAR_LAYERS">
+        <source>CELAR LAYERS</source>
+        <target>HAPUS LAPISAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_EREASE">
+        <source>EREASE</source>
+        <target>HAPUS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_PLAIN">
+        <source>PLAIN</source>
+        <target>DATARAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_DIRT">
+        <source>DIRT</source>
+        <target>TANAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FOREST">
+        <source>FOREST</source>
+        <target>HUTAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_MOUNTAIN">
+        <source>MOUNTAIN</source>
+        <target>GUNUNG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_RIVER">
+        <source>RIVER</source>
+        <target>SUNGAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_BRIDGE">
+        <source>BRIDGE</source>
+        <target>JEMBATAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CITY">
+        <source>CITY</source>
+        <target>KOTA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_RUBBLE">
+        <source>RUBBLE</source>
+        <target>RERUNTUHAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_STATUE">
+        <source>STATUE</source>
+        <target>PATUNG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FENCE">
+        <source>FENCE</source>
+        <target>PAGAR</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_ROAD#1">
+        <source>ROAD#1</source>
+        <target>JALAN#1</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_ROAD#2">
+        <source>ROAD#2</source>
+        <target>JALAN#2</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_HQ">
+        <source>HQ</source>
+        <target>MARKAS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_BARRACKS">
+        <source>BARRACKS</source>
+        <target>BARAK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FACTORY">
+        <source>FACTORY</source>
+        <target>PABRIK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_AIRPORT">
+        <source>AIRPORT</source>
+        <target>BANDARA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_SPAWN">
+        <source>SPAWN</source>
+        <target>TITIK MUNCUL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_GSM_TOWER">
+        <source>GSM TOWER</source>
+        <target>MENARA GSM</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_TOWER">
+        <source>TOWER</source>
+        <target>MENARA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_INFANTRY">
+        <source>INFANTRY</source>
+        <target>INFANTERI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_TANK">
+        <source>TANK</source>
+        <target>TANK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_HELI">
+        <source>HELI</source>
+        <target>HELI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CIVILIAN">
+        <source>CIVILIAN</source>
+        <target>SIPIL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CONCRETE">
+        <source>CONCRETE</source>
+        <target>BETON</target>
+      </trans-unit>
+      <trans-unit id="MSG_NO_ENOUGH_AP">
+        <source>NOT ENOUGH AP</source>
+        <target>AP TIDAK CUKUP</target>
+      </trans-unit>
+      <trans-unit id="MSG_START_YOUR_TURN_NOW">
+        <source>Start your turn now!</source>
+        <target>Mulai giliranmu sekarang!</target>
+      </trans-unit>
+      <trans-unit id="MSG_EMPTY_DISPLAY">
+        <source>&lt; NOTHING TO DISPLAY&#000a;&lt; SELECT UNIT OR BUILDING</source>
+        <target>&lt; TIDAK ADA YANG DITAMPILKAN&#000a;&lt; PILIH UNIT ATAU BANGUNAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_GAME_DESCRIPTION_1">
+        <source>FREE* &amp; OPEN-SOURCE</source>
+        <target>GRATIS* &amp; SUMBER TERBUKA</target>
+      </trans-unit>
+      <trans-unit id="MSG_GAME_DESCRIPTION_2">
+        <source>TURN-BASED STRATEGY GAME</source>
+        <target>GAME STRATEGI BERBASIS GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_FREE_AS_FREEDOM">
+        <source>* FREE AS FREEDOM, NOT FREE AS IN FREE BEER</source>
+        <target>* GRATIS SEBAGAI KEBEBASAN, BUKAN GRATIS SEPERTI BIR GRATIS</target>
+      </trans-unit>
+      <trans-unit id="MSG_INDIE_GAME">
+        <source>INDIE GAME&#000a;DESIGN &amp; &#000a;DEVELOP</source>
+        <target>GAME INDIE&#000a;DESAIN &amp; &#000a;KEMBANGKAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_USE_UNIQUE_NAME">
+        <source>USE UNIQUE NAME</source>
+        <target>GUNAKAN NAMA UNIK</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_CREATE_NEW_ISLAND">
+        <source>CREATE NEW ISLAND</source>
+        <target>BUAT PULAU BARU</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_LOSE_MAP_DATA">
+        <source>YOU WILL LOSE MAP DATA!</source>
+        <target>ANDA AKAN KEHILANGAN DATA PETA!</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GAME_OVER">
+        <source>GAME OVER</source>
+        <target>PERMAINAN SELESAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DOMINATION">
+        <source>DOMINATION</source>
+        <target>DOMINASI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MOVES">
+        <source>MOVES</source>
+        <target>GERAKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DEPLOYED">
+        <source>DEPLOYED</source>
+        <target>DIKERAHKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ELIMINATED">
+        <source>ELIMINATED</source>
+        <target>DIELIMINASI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BLUE">
+        <source>BLUE</source>
+        <target>BIRU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RED">
+        <source>RED</source>
+        <target>MERAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TURN">
+        <source>TURN</source>
+        <target>GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TIME">
+        <source>TIME</source>
+        <target>WAKTU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TOTAL_SCORE">
+        <source>TOTAL SCORE</source>
+        <target>SKOR TOTAL</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLAYERS_TIME">
+        <source>PLAYERS TIME</source>
+        <target>WAKTU PEMAIN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MENU">
+        <source>MENU</source>
+        <target>MENU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLAY_AGAIN">
+        <source>PLAY AGAIN</source>
+        <target>MAINKAN LAGI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REQUIES_RESTART">
+        <source>MAP RESTART REQUIRED</source>
+        <target>RESTART PETA DIPERLUKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_LANGUAGE">
+        <source>LANGUAGE</source>
+        <target>BAHASA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_OVERSCAN">
+        <source>OVERSCAN</source>
+        <target>OVERSCAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GAME_TIME">
+        <source>GAME TIME</source>
+        <target>WAKTU PERMAINAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TURNS">
+        <source>TURNS</source>
+        <target>GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BLUE_WINS">
+        <source>BLUE WINS</source>
+        <target>BIRU MENANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RED_WINS">
+        <source>RED WINS</source>
+        <target>MERAH MENANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLAYING_AS">
+        <source>PLAYING AS</source>
+        <target>BERMAIN SEBAGAI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAPS">
+        <source>MAPS</source>
+        <target>PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PAGE">
+        <source>PAGE</source>
+        <target>HALAMAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_SAVE">
+        <source>SAVE</source>
+        <target>SIMPAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_LOAD">
+        <source>LOAD</source>
+        <target>MUAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAP_TO_UPLOAD">
+        <source>Map to upload</source>
+        <target>Peta untuk diunggah</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PROCEED_QUESTION">
+        <source>Proceed?</source>
+        <target>Lanjutkan?</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UPLOAD_MAP">
+        <source>Upload Map</source>
+        <target>Unggah Peta</target>
+      </trans-unit>
+      <trans-unit id="LABEL_UPLOAD">
+        <source>Upload</source>
+        <target>Unggah</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CANCEL">
+        <source>Cancel</source>
+        <target>Batal</target>
+      </trans-unit>
+      <trans-unit id="TIP_COMPLETE_MAP_FIRST">
+        <source>You need to complete this map first in skirmish mode in order to be able to upload it.</source>
+        <target>Anda harus menyelesaikan peta ini terlebih dahulu dalam mode pertempuran kecil untuk dapat mengunggahnya.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GOT_IT">
+        <source>Got it!</source>
+        <target>Mengerti!</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ONLINE_MENU">
+        <source>ONLINE MAPS</source>
+        <target>PETA ONLINE</target>
+      </trans-unit>
+      <trans-unit id="MSG_ONLINE_MENU_DESC">
+        <source>DOWNLOAD NEW MAPS OR SHARE YOUR OWN CREATIONS WITH THE WORLD!</source>
+        <target>UNDUH PETA BARU ATAU BAGIKAN KARYA ANDA SENDIRI DENGAN DUNIA!</target>
+      </trans-unit>
+      <trans-unit id="TIP_UPLOADING_WAIT">
+        <source>Uploading! Please wait.</source>
+        <target>Mengunggah! Mohon tunggu.</target>
+      </trans-unit>
+      <trans-unit id="TIP_UPLOADING_SUCCESS">
+        <source>Upload successful! Now you can share your new map code with your friends: </source>
+        <target>Unggahan berhasil! Sekarang Anda dapat membagikan kode peta baru Anda dengan teman-teman Anda: </target>
+      </trans-unit>
+      <trans-unit id="TIP_UPLOADING_FAIL">
+        <source>Upload failed. Please try again later.</source>
+        <target>Unggahan gagal. Silakan coba lagi nanti.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DONE">
+        <source>Done</source>
+        <target>Selesai</target>
+      </trans-unit>
+      <trans-unit id="TIP_WELCOME_ONLINE">
+        <source>Welcome to ToF Online!</source>
+        <target>Selamat datang di ToF Online!</target>
+      </trans-unit>
+      <trans-unit id="TIP_NEED_REGISTER">
+        <source>Before you can start using online options, we need to register your device with our online system.</source>
+        <target>Sebelum Anda dapat mulai menggunakan opsi online, kami perlu mendaftarkan perangkat Anda dengan sistem online kami.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REGISTER">
+        <source>Register</source>
+        <target>Daftar</target>
+      </trans-unit>
+      <trans-unit id="LABEL_LATER">
+        <source>Maybe later</source>
+        <target>Mungkin nanti</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REGISTER_PLAYER">
+        <source>Register Player</source>
+        <target>Daftarkan Pemain</target>
+      </trans-unit>
+      <trans-unit id="TIP_REQUESTING_PLAYER_ID">
+        <source>Requesting Player ID! Please wait.</source>
+        <target>Meminta ID Pemain! Mohon tunggu.</target>
+      </trans-unit>
+      <trans-unit id="TIP_REQUESTING_PLAYER_FAIL">
+        <source>Requesting Player ID failed. Please try again later.</source>
+        <target>Permintaan ID Pemain gagal. Silakan coba lagi nanti.</target>
+      </trans-unit>
+      <trans-unit id="TIP_REQUESTING_PLAYER_SUCCESS">
+        <source>Requesting Player ID successful. Welcome to ToF Online!</source>
+        <target>Permintaan ID Pemain berhasil. Selamat datang di ToF Online!</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DOWNLOAD_MAP">
+        <source>Download Map</source>
+        <target>Unduh Peta</target>
+      </trans-unit>
+      <trans-unit id="TIP_INPUT_CODE">
+        <source>Please input map code</source>
+        <target>Silakan masukkan kode peta</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DOWNLOAD">
+        <source>Download</source>
+        <target>Unduh</target>
+      </trans-unit>
+      <trans-unit id="TIP_DOWNLOADING_WAIT">
+        <source>Downloading map! Please wait.</source>
+        <target>Mengunduh peta! Mohon tunggu.</target>
+      </trans-unit>
+      <trans-unit id="TIP_MAP_DOWNLOAD_SUCCESS">
+        <source>Map has been downloaded.</source>
+        <target>Peta telah diunduh.</target>
+      </trans-unit>
+      <trans-unit id="TIP_MAP_DOWNLOAD_FAIL">
+        <source>Could not download a map. Please check if code is correct and try again.</source>
+        <target>Tidak dapat mengunduh peta. Silakan periksa apakah kode sudah benar dan coba lagi.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PLAY_AGAIN">
+        <source>PLAY AGAIN</source>
+        <target>MAINKAN LAGI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_VERSION">
+        <source>Version</source>
+        <target>Versi</target>
+      </trans-unit>
+      <trans-unit id="TITLE_GAMEPAD_CONFIG">
+        <source>GAMEPAD CONFIGURATION</source>
+        <target>KONFIGURASI GAMEPAD</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PREVIOUS_UNIT">
+        <source>SELECT PREVIOUS UNIT</source>
+        <target>PILIH UNIT SEBELUMNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEXT_UNIT">
+        <source>SELECT NEXT UNIT</source>
+        <target>PILIH UNIT BERIKUTNYA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SELECTOR_MOVEMENT">
+        <source>MOVE FIELD SELECTOR</source>
+        <target>GERAKKAN PEMILIH LAPANGAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GAME_MENU_MOVEMENT">
+        <source>NAVIGATE MENU</source>
+        <target>NAVIGASI MENU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_END_TURN">
+        <source>END YOUR TURN</source>
+        <target>AKHIRI GILIRAN ANDA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BACK_TO_MENU">
+        <source>OPEN MAIN MENU</source>
+        <target>BUKA MENU UTAMA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SELECT">
+        <source>PERFORM ACTION</source>
+        <target>LAKUKAN AKSI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_DEPLOY_UNIT">
+        <source>BUY NEW UNIT</source>
+        <target>BELI UNIT BARU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GAMEPAD_INFO">
+        <source>GAMEPAD INFO</source>
+        <target>INFO GAMEPAD</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_THEME">
+        <source>MAP THEME</source>
+        <target>TEMA PETA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SUMMER">
+        <source>SUMMER</source>
+        <target>MUSIM PANAS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_FALL">
+        <source>FALL</source>
+        <target>MUSIM GUGUR</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WINTER">
+        <source>WINTER</source>
+        <target>MUSIM DINGIN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_FAILURE">
+        <source>OPERATION FAILURE</source>
+        <target>KEGAGALAN OPERASI</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_FILE_ERROR_NAME">
+        <source>Map name may only contain alphanumeric characters and an underscore sign.</source>
+        <target>Nama peta hanya boleh berisi karakter alfanumerik dan tanda garis bawah.</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_FILE_NOT_FOUND">
+        <source>Map with specified name does not exists.</source>
+        <target>Peta dengan nama yang ditentukan tidak ada.</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_CHECK_TYPOS">
+        <source>Please re-check file name</source>
+        <target>Silakan periksa kembali nama file</target>
+      </trans-unit>
+      <trans-unit id="LABEL_OK">
+        <source>OK</source>
+        <target>OK</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEXT_TURN">
+        <source>END TURN</source>
+        <target>AKHIRI GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CPU_TURN">
+        <source>CPU TURN</source>
+        <target>GILIRAN CPU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REFRESHING_MATCHES">
+        <source>REFRESHING MATCHES</source>
+        <target>MENYEGARKAN PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="TIP_REFRESHING_WAIT">
+        <source>REFRESHING ONLINE MATCHES LIST. PLEASE WAIT...</source>
+        <target>MENYEGARKAN DAFTAR PERTANDINGAN ONLINE. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CREATE_MATCH">
+        <source>CREATE MATCH</source>
+        <target>BUAT PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_CONFIRM_CREATE">
+        <source>DO YOU WANT TO HOST A NEW MATCH?</source>
+        <target>APAKAH ANDA INGIN MENJADI HOST PERTANDINGAN BARU?</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PROCEED">
+        <source>PROCEED</source>
+        <target>LANJUTKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PICK_SIDE">
+        <source>PICK SIDE</source>
+        <target>PILIH SISI</target>
+      </trans-unit>
+      <trans-unit id="MSG_PICK_SIDE">
+        <source>PICK THE SIDE YOU WANT TO PLAY AS</source>
+        <target>PILIH SISI YANG INGIN ANDA MAINKAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_SELECTED_MAP">
+        <source>SELECTED MAP: </source>
+        <target>PETA TERPILIH: </target>
+      </trans-unit>
+      <trans-unit id="MSG_SELECTED_SIDE">
+        <source>SELECTED SIDE: </source>
+        <target>SISI TERPILIH: </target>
+      </trans-unit>
+      <trans-unit id="MSG_READY_TO_CREATE">
+        <source>CREATE MATCH?</source>
+        <target>BUAT PERTANDINGAN?</target>
+      </trans-unit>
+      <trans-unit id="MSG_CREATING_MATCH_WAIT">
+        <source>CREATING NEW MATCH. PLEASE WAIT...</source>
+        <target>MEMBUAT PERTANDINGAN BARU. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_FAILURE">
+        <source>OPERATION FAILURE</source>
+        <target>KEGAGALAN OPERASI</target>
+      </trans-unit>
+      <trans-unit id="MSG_OPERATION_FAILED">
+        <source>NETWORK OPERATION FAILED. PLEASE CHECK YOUR INTERNET CONNECTION AND TRY AGAIN.</source>
+        <target>OPERASI JARINGAN GAGAL. SILAKAN PERIKSA KONEKSI INTERNET ANDA DAN COBA LAGI.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_JOIN_MATCH">
+        <source>JOIN A MATCH</source>
+        <target>GABUNG PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_INPUT_MATCH_CODE">
+        <source>INPUT MATCH JOIN CODE</source>
+        <target>MASUKKAN KODE GABUNG PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_JOIN">
+        <source>JOIN</source>
+        <target>GABUNG</target>
+      </trans-unit>
+      <trans-unit id="MSG_ALREADY_IN_MATCH">
+        <source>YOU ARE ALREADY IN THAT MATCH</source>
+        <target>ANDA SUDAH BERADA DALAM PERTANDINGAN ITU</target>
+      </trans-unit>
+      <trans-unit id="MSG_FETCHING_MATCH_DETAILS">
+        <source>FETCHING MATCH DETAILS. PLEASE WAIT...</source>
+        <target>MENGAMBIL DETAIL PERTANDINGAN. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="MAG_AVAILABLE_SIDE">
+        <source>AVAILABLE SIDE: </source>
+        <target>SISI YANG TERSEDIA: </target>
+      </trans-unit>
+      <trans-unit id="MAG_PROCEED_JOIN">
+        <source>JOIN THIS MATCH?</source>
+        <target>GABUNG PERTANDINGAN INI?</target>
+      </trans-unit>
+      <trans-unit id="MSG_JOINING_MATCH_WAIT">
+        <source>JOINING A MATCH. PLEASE WAIT...</source>
+        <target>BERGABUNG DENGAN PERTANDINGAN. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MATCH_CODE">
+        <source>MATCH CODE: </source>
+        <target>KODE PERTANDINGAN: </target>
+      </trans-unit>
+      <trans-unit id="LABEL_YOUR_TURN">
+        <source>YOUR TURN</source>
+        <target>GILIRAN ANDA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ENEMY_TURN">
+        <source>OPPONENT TURN</source>
+        <target>GILIRAN LAWAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_YOU_WIN">
+        <source>YOU WON</source>
+        <target>ANDA MENANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_YOU_LOSE">
+        <source>YOU LOST</source>
+        <target>ANDA KALAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NEW_MATCH">
+        <source>NEW MATCH</source>
+        <target>PERTANDINGAN BARU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MATCH_IN_PROGRESS">
+        <source>IN PROGRESS</source>
+        <target>SEDANG BERLANGSUNG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MATCH_ENDED">
+        <source>MATCH ENDED</source>
+        <target>PERTANDINGAN BERAKHIR</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MATCH_FORFEIT">
+        <source>OPPONENT LEFT</source>
+        <target>LAWAN MENYERAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MAP_CODE">
+        <source>MAP: </source>
+        <target>PETA: </target>
+      </trans-unit>
+      <trans-unit id="LABEL_INVALID_MATCH">
+        <source>INVALID MATCH</source>
+        <target>PERTANDINGAN TIDAK VALID</target>
+      </trans-unit>
+      <trans-unit id="LABEL_ABANDON_MATCH">
+        <source>ABANDON MATCH</source>
+        <target>TINGGALKAN PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="MAG_ABANDON_MATCH">
+        <source>ARE YOU SURE YOU WANT TO ABANDON THIS MATCH? YOU WILL NOT BE ABLE TO CONTINUE THIS GAME.</source>
+        <target>APAKAH ANDA YAKIN INGIN MENINGGALKAN PERTANDINGAN INI? ANDA TIDAK AKAN DAPAT MELANJUTKAN PERMAINAN INI.</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CLEAR_SLOT">
+        <source>CLEAR GAME SLOT</source>
+        <target>KOSONGKAN SLOT PERMAINAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_CLEARING_SLOT_WAIT">
+        <source>CLEARING GAME SLOT. PLEASE WAIT...</source>
+        <target>MENGOSONGKAN SLOT PERMAINAN. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SHOW_REPLAY">
+        <source>SHOW REPLAY</source>
+        <target>TAMPILKAN ULANGAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_SHOW_REPLAY">
+        <source>DO YOU WANT TO SEE THE REPLAY OF OPPONENTS TURN?</source>
+        <target>APAKAH ANDA INGIN MELIHAT ULANGAN GILIRAN LAWAN?</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REPLAY">
+        <source>REPLAY</source>
+        <target>ULANG</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SKIP">
+        <source>SKIP</source>
+        <target>LEWATI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_LOADING_MATCH">
+        <source>LOADING MATCH</source>
+        <target>MEMUAT PERTANDINGAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_LOADING_MATCH_WAIT">
+        <source>LOADING MATCH DATA. PLEASE WAIT...</source>
+        <target>MEMUAT DATA PERTANDINGAN. MOHON TUNGGU...</target>
+      </trans-unit>
+      <trans-unit id="MSG_OPPONENT_WAIT">
+        <source>WAITING FOR OPPONENT...</source>
+        <target>MENUNGGU LAWAN...</target>
+      </trans-unit>
+      <trans-unit id="MSG_CHECKING_STATE">
+        <source>CHECKING FOR NEW MOVES...</source>
+        <target>MEMERIKSA GERAKAN BARU...</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REPLAYING_MOVES">
+        <source>REPLAYING TURN</source>
+        <target>MENGULANG GILIRAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_REFRESH">
+        <source>REFRESH</source>
+        <target>SEGARKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_MULTIPLAYER">
+        <source>MULTIPLAYER</source>
+        <target>MULTIPEMAIN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CREATE">
+        <source>CREATE</source>
+        <target>BUAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_FORFEIT">
+        <source>FORFEIT</source>
+        <target>MENYERAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CLEAR">
+        <source>CLEAR</source>
+        <target>BERSIHKAN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_HELP">
+        <source>HELP</source>
+        <target>BANTUAN</target>
+      </trans-unit>
+      <trans-unit id="MSG_MULTIPLAYER_WELCOME">
+        <source>Welcome to ToF multiplayer!</source>
+        <target>Selamat datang di multipemain ToF!</target>
+      </trans-unit>
+      <trans-unit id="TIP_ONLINE_HELP_1">
+        <source>To start a new game, press the Create button on one of the free slots. If the button is disabled, it means that you need to download an online map first. Visit http://online.tof.tof.in to find some! Once you have hosted a game, give the match code to your friend so they may join.</source>
+        <target>Untuk memulai permainan baru, tekan tombol Buat di salah satu slot gratis. Jika tombol dinonaktifkan, itu berarti Anda perlu mengunduh peta online terlebih dahulu. Kunjungi http://online.tof.tof.in untuk menemukan beberapa! Setelah Anda menjadi host game, berikan kode pertandingan kepada teman Anda agar mereka dapat bergabung.</target>
+      </trans-unit>
+      <trans-unit id="TIP_ONLINE_HELP_2">
+        <source>While in a match, there is no time limit for you or your opponent to take a turn. Remember, you don't have to wait for your turn idly - you are free to play campaign, skirmish, or load into a different multiplayer match! Quitting the game is also an option, but would you do that?</source>
+        <target>Saat dalam pertandingan, tidak ada batasan waktu bagi Anda atau lawan untuk mengambil giliran. Ingat, Anda tidak harus menunggu giliran Anda dengan diam - Anda bebas bermain kampanye, pertempuran kecil, atau memuat ke pertandingan multipemain yang berbeda! Keluar dari game juga merupakan pilihan, tetapi apakah Anda akan melakukannya?</target>
+      </trans-unit>
+      <trans-unit id="TIP_ONLINE_HELP_3">
+        <source>You are limited to only four match slots, so remember to clear the ones, that have ended.</source>
+        <target>Anda hanya dibatasi pada empat slot pertandingan, jadi ingatlah untuk membersihkan yang sudah berakhir.</target>
+      </trans-unit>
+      <trans-unit id="MSG_SPAWN_BLOCKED">
+        <source>SPAWN BLOCKED</source>
+        <target>TITIK MUNCUL DIBLOKIR</target>
+      </trans-unit>
+      <trans-unit id="MSG_MULTIPLAYER_LOBBY_HEADLINE">
+        <source>ONLINE MULTIPLAYER LOBBY</source>
+        <target>LOBI MULTIPEMAIN ONLINE</target>
+      </trans-unit>
+      <trans-unit id="MSG_MULTIPLAYER_LOBBY_SUB">
+        <source>you may have up to four simultaneous games</source>
+        <target>Anda dapat memiliki hingga empat game secara bersamaan</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_CLEAR_MAP">
+        <source>CLEAR EVERYTHING IN MAP</source>
+        <target>BERSIHKAN SEMUA YANG ADA DI PETA</target>
+      </trans-unit>
+      <trans-unit id="MSG_WORKSHOP_FILL_MAP">
+        <source>FILL MAP WITH GRASS TILES</source>
+        <target>ISI PETA DENGAN UBIN RUMPUT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_WORKSHOP_TILES">
+        <source>TILES</source>
+        <target>UBIN</target>
+      </trans-unit>
+      <trans-unit id="LABEL_PREVIEW">
+        <source>PREVIEW</source>
+        <target>PRATINJAU</target>
+      </trans-unit>
+      <trans-unit id="MSG_ASK_UPLOAD">
+        <source>BEGIN MAP UPLOAD?</source>
+        <target>MULAI UNGGAH PETA?</target>
+      </trans-unit>
+      <trans-unit id="LABEL_GFX">
+        <source>GFX</source>
+        <target>GFX</target>
+      </trans-unit>
+      <trans-unit id="LABEL_SOUND">
+        <source>SFX</source>
+        <target>SFX</target>
+      </trans-unit>
+      <trans-unit id="LABEL_TOOLTIPS">
+        <source>TOOLTIPS</source>
+        <target>TIPS ALAT</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CURRENT_TEAM">
+        <source>CURRENT TEAM</source>
+        <target>TIM SAAT INI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CURRENT_MAP">
+        <source>CURRENT MAP</source>
+        <target>PETA SAAT INI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_AI_SPEED">
+        <source>AI SPEED</source>
+        <target>KECEPATAN AI</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CAMERA_MOVE_TO_BUNKER">
+        <source>MOVE CAMERA TO HQ</source>
+        <target>PINDAHKAN KAMERA KE MARKAS</target>
+      </trans-unit>
+      <trans-unit id="LABEL_CAMERA_SPEED">
+        <source>CAMERA SPEED</source>
+        <target>KECEPATAN KAMERA</target>
+      </trans-unit>
+      <trans-unit id="LABEL_BLUE_TEAM_TURN">
+        <source>BLUE TEAM TURN</source>
+        <target>GILIRAN TIM BIRU</target>
+      </trans-unit>
+      <trans-unit id="LABEL_RED_TEAM_TURN">
+        <source>RED TEAM TURN</source>
+        <target>GILIRAN TIM MERAH</target>
+      </trans-unit>
+      <trans-unit id="LABEL_NO_MORE_MOVES">
+        <source>NO MOVES LEFT</source>
+        <target>TIDAK ADA GERAKAN TERSISA</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

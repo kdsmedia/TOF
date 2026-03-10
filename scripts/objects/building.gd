@@ -14,9 +14,9 @@ export var spawn_point_position = Vector2(0, 1)
 var flag
 var turn_claimed = -1
 
-var object_factory = preload('../object_factory.gd').new()
+var object_factory = preload('res://scripts/object_factory.gd').new()
 
-var floating_ap_template = preload('res://particle/hit_points.xscn')
+var floating_ap_template = preload('res://particle/hit_points.tscn')
 var floating_ap
 
 var TYPE_BUNKER = 0
@@ -34,22 +34,22 @@ func get_spawn_point_pos():
 	return spawn_point
 
 func get_initial_pos():
-	position_on_map = current_map.world_to_map(self.get_pos())
+	position_on_map = current_map.world_to_map(self.position)
 	spawn_point = Vector2(position_on_map) + spawn_point_position
 	return position_on_map
 
 func set_pos_map(new_position):
-	self.set_pos(current_map.map_to_world(new_position))
+	self.position = current_map.map_to_world(new_position)
 	position_on_map = new_position
 	spawn_point = Vector2(position_on_map) + spawn_point_position
 
 func claim(new_player, turn):
 	if new_player == -1:
-		self.set_frame(0)
+		self.set_building_frame(0)
 	if new_player == 0:
-		self.set_frame(1)
+		self.set_building_frame(1)
 	if new_player == 1:
-		self.set_frame(2)
+		self.set_building_frame(2)
 
 	player = new_player
 	self.turn_claimed = turn
@@ -58,10 +58,10 @@ func claim(new_player, turn):
 func get_player():
 	return player
 
-func set_frame(number):
-	var current_frame = get_region_rect()
-	var new_frame = Rect2(number * 64, current_frame.pos.y, 64, 64)
-	set_region_rect(new_frame)
+func set_building_frame(number):
+	var current_frame = region_rect
+	var new_frame = Rect2(number * 64, current_frame.position.y, 64, 64)
+	region_rect = new_frame
 
 func get_spawn_type():
 	if type == TYPE_BUNKER || type == TYPE_BARRACKS:
@@ -106,7 +106,7 @@ func get_cost():
 	return get_required_ap()
 
 func show_floating_ap():
-	floating_ap = floating_ap_template.instance()
+	floating_ap = floating_ap_template.instantiate()
 	floating_ap.set_text(str(bonus_ap))
 	floating_ap.unit = self
 	floating_ap.show_ap_icon()
@@ -114,7 +114,7 @@ func show_floating_ap():
 
 func clear_floating_damage():
 	self.remove_child(floating_ap)
-	floating_ap.call_deferred("free")
+	floating_ap.call_deferred("queue_free")
 	
 func can_spawn_units():
     if self.type == 4:
