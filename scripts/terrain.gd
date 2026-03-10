@@ -1,4 +1,3 @@
-
 extends Sprite
 export var destructable = false
 export var fence = false
@@ -12,18 +11,18 @@ export var smoke_particles = 16
 export var smoke_lifetime = 1
 export var unique_type_id = -1
 
-var explosion_big_template = preload('res://particle/explosion_big.xscn')
+var explosion_big_template = preload('res://particle/explosion_big.tscn')
 var explosion
 
 func get_pos_map():
 	return position_on_map
 
 func get_initial_pos():
-	position_on_map = current_map.world_to_map(self.get_pos())
+	position_on_map = current_map.world_to_map(self.position)
 	return position_on_map
 
 func set_pos_map(new_position):
-	self.set_pos(current_map.map_to_world(new_position))
+	self.position = current_map.map_to_world(new_position)
 	position_on_map = new_position
 
 func set_damage():
@@ -32,22 +31,22 @@ func set_damage():
 		if self.has_node("smoke"):
 			var smoke = self.get_node("smoke")
 			smoke.show()
-			smoke.set_lifetime(smoke_lifetime)
-			smoke.set_amount(smoke_particles * damage)
-			smoke.set_emitting(true)
+			smoke.lifetime = smoke_lifetime
+			smoke.amount = smoke_particles * damage
+			smoke.emitting = true
 
-		var region = self.get_region_rect()
-		self.set_region_rect(Rect2(Vector2(region.pos.x, region.pos.y + 64), Vector2(region.size.x, region.size.y)))
+		var region = self.region_rect
+		self.region_rect = Rect2(Vector2(region.position.x, region.position.y + 64), Vector2(region.size.x, region.size.y))
 		self.show_explosion()
 
 func show_explosion():
-	explosion = explosion_big_template.instance()
+	explosion = explosion_big_template.instantiate()
 	explosion.unit = self
 	self.add_child(explosion)
 
 func clear_explosion():
 	self.remove_child(explosion)
-	explosion.call_deferred("free")
+	explosion.call_deferred("queue_free")
 
 func connect_with_neighbours():
 	var neighbours = 0 # neibours in binary
@@ -68,37 +67,37 @@ func connect_with_neighbours():
 			neighbours += 16
 
 	if neighbours in [2,4,6]:
-		self.set_frame(1)
+		self.frame = 1
 		return
 	if neighbours in [8,16,24]:
-		self.set_frame(0)
+		self.frame = 0
 		return
 	if neighbours in [10]:
-		self.set_frame(2)
+		self.frame = 2
 		return
 	if neighbours in [12]:
-		self.set_frame(3)
+		self.frame = 3
 		return
 	if neighbours in [20]:
-		self.set_frame(4)
+		self.frame = 4
 		return
 	if neighbours in [18]:
-		self.set_frame(5)
+		self.frame = 5
 		return
 	if neighbours in [26]:
-		self.set_frame(6)
+		self.frame = 6
 		return
 	if neighbours in [14]:
-		self.set_frame(7)
+		self.frame = 7
 		return
 	if neighbours in [28]:
-		self.set_frame(8)
+		self.frame = 8
 		return
 	if neighbours in [22]:
-		self.set_frame(9)
+		self.frame = 9
 		return
 	if neighbours in [30]:
-		self.set_frame(10)
+		self.frame = 10
 		return
 
 func enable_snow_particle():

@@ -1,0 +1,215 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/intro.gd" type="Script" id=1]
+[ext_resource path="res://assets/branding/tof_logo.png" type="Texture" id=2]
+[ext_resource path="res://assets/branding/tof_logo_enchanced.png" type="Texture" id=3]
+[ext_resource path="res://gui/corners.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sounds/soundtrack/intro.ogg" type="AudioStream" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("center/elements/press_start:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "intro"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("center/elements/tof_logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("center/elements/presents:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.9, 3.4, 5, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("center/elements/ToF_logo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("center/elements/ToF_logo:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, -62 ), Vector2( -308, -62 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("center/elements/ToF_logo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, true, false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("center/credits:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 6, 6.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="elements" type="Control" parent="center"]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tof_logo" type="Sprite" parent="center/elements"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 2 )
+
+[node name="presents" type="Label" parent="center/elements"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -128.0
+margin_top = -22.0
+margin_right = 130.0
+margin_bottom = 23.0
+text = "PRESENTS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToF_logo" type="TextureRect" parent="center/elements"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -308.0
+margin_top = -62.0
+margin_right = 309.0
+margin_bottom = 75.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="press_start" type="Label" parent="center/elements"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -100.0
+margin_top = 160.0
+margin_right = 97.0
+margin_bottom = 181.0
+text = "PRESS START"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credits" type="Control" parent="center"]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="czlowiekimadlo" type="Label" parent="center/credits"]
+margin_left = -280.0
+margin_top = 80.0
+margin_right = 281.0
+margin_bottom = 92.0
+text = "CZLOWIEKIMADLO - WRMZ - W84DEATH - MATHIAS NOVA - QMYAAN"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grand_Beats" type="Label" parent="center/credits"]
+margin_left = -131.0
+margin_top = 95.0
+margin_right = 310.0
+margin_bottom = 109.0
+text = "GRAND BEATS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="corners" parent="." instance=ExtResource( 4 )]
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+autoplay = "intro"
+anims/idle = SubResource( 1 )
+anims/intro = SubResource( 2 )
+
+[node name="idle_timer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+autostart = true
+__meta__ = {
+"_editor_autostart_when_hidden": true
+}
+
+[connection signal="timeout" from="idle_timer" to="." method="_on_idle_timer_timeout"]

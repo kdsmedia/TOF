@@ -1,0 +1,291 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://gui/font_16.tres" type="Theme" id=1]
+[ext_resource path="res://assets/gui/buttons/analog_size3_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/buttons/analog_size3_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/buttons/analog_size3_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/buttons/analog_size3_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/buttons/analog_size3_7.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/buttons/analog_size2_0.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/buttons/analog_size2_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/gui/buttons/analog_size2_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/gui/buttons/analog_size2_3.png" type="Texture" id=10]
+[ext_resource path="res://assets/gui/buttons/analog_size2_4.png" type="Texture" id=11]
+[ext_resource path="res://assets/gui/buttons/analog_size3_0.png" type="Texture" id=12]
+[ext_resource path="res://assets/gui/buttons/analog_size3_1.png" type="Texture" id=13]
+[ext_resource path="res://assets/gui/buttons/analog_size3_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/gui/buttons/analog_size3_4.png" type="Texture" id=15]
+[ext_resource path="res://scripts/translate_me.gd" type="Script" id=16]
+[ext_resource path="res://assets/gui/dialogs/menu9_dark@2x.png" type="Texture" id=17]
+
+[sub_resource type="Theme" id=1]
+
+[node name="toolbox" type="Control"]
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -144.0
+margin_right = 288.0
+margin_bottom = 200.0
+texture = ExtResource( 17 )
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="front" type="Control" parent="."]
+margin_left = -277.0
+margin_top = -214.0
+margin_right = -237.0
+margin_bottom = -174.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fill" type="TextureButton" parent="front"]
+margin_left = 405.0
+margin_top = 278.0
+margin_right = 549.0
+margin_bottom = 326.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="label" type="Label" parent="front/fill"]
+margin_left = -33.0
+margin_top = 15.0
+margin_right = 177.0
+margin_bottom = 33.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_CREATE"
+align = 1
+script = ExtResource( 16 )
+trans_key = "LABEL_WORKSHOP_CREATE"
+
+[node name="label_fill_map" type="Label" parent="front"]
+margin_left = 246.0
+margin_top = 269.0
+margin_right = 385.0
+margin_bottom = 285.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "FILL MAP WITH GRASS"
+align = 1
+script = ExtResource( 16 )
+trans_key = "MSG_WORKSHOP_FILL_MAP"
+
+[node name="label_theme" type="Label" parent="front"]
+margin_left = 107.0
+margin_top = 130.0
+margin_right = 389.0
+margin_bottom = 146.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAVBEL_WORKSOP_THEME"
+align = 1
+script = ExtResource( 16 )
+trans_key = "LABEL_WORKSHOP_THEME"
+
+[node name="label_clear_map" type="Label" parent="front"]
+margin_left = 206.0
+margin_top = 229.0
+margin_right = 386.0
+margin_bottom = 245.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NEW MAP"
+align = 1
+script = ExtResource( 16 )
+trans_key = "LABEL_WORKSHOP_NEW_MAP"
+
+[node name="label_lose_data" type="Label" parent="front"]
+margin_left = 176.0
+margin_top = 192.0
+margin_right = 384.0
+margin_bottom = 208.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MSG_WORKSHOP_LOSE_MAP_DATA"
+align = 1
+script = ExtResource( 16 )
+trans_key = "MSG_WORKSHOP_LOSE_MAP_DATA"
+
+[node name="Label_x" type="Label" parent="front"]
+margin_left = 294.0
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 315.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x"
+align = 1
+
+[node name="label_size" type="Label" parent="front"]
+margin_left = -38.0
+margin_top = 290.0
+margin_right = 152.0
+margin_bottom = 308.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_WORKSHOP_SIZE"
+align = 1
+script = ExtResource( 16 )
+trans_key = "LABEL_WORKSHOP_SIZE"
+
+[node name="x" type="TextureButton" parent="front"]
+margin_left = 173.0
+margin_top = 301.0
+margin_right = 259.0
+margin_bottom = 349.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
+
+[node name="label" type="Label" parent="front/x"]
+margin_left = 4.0
+margin_top = 12.0
+margin_right = 86.0
+margin_bottom = 30.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "8"
+align = 1
+
+[node name="y" type="TextureButton" parent="front"]
+margin_left = 301.0
+margin_top = 283.0
+margin_right = 397.0
+margin_bottom = 331.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
+
+[node name="label" type="Label" parent="front/y"]
+margin_left = 4.0
+margin_top = 12.0
+margin_right = 86.0
+margin_bottom = 30.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "8"
+align = 1
+
+[node name="clear_units" type="TextureButton" parent="front"]
+visible = false
+margin_left = 129.0
+margin_top = 273.0
+margin_right = 273.0
+margin_bottom = 321.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 15 )
+
+[node name="label" type="Label" parent="front/clear_units"]
+margin_left = 3.0
+margin_top = 16.0
+margin_right = 139.0
+margin_bottom = 34.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "units"
+align = 1
+uppercase = true
+
+[node name="clear_terrain" type="TextureButton" parent="front"]
+margin_left = -10.0
+margin_top = 190.0
+margin_right = 154.0
+margin_bottom = 238.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 15 )
+
+[node name="label" type="Label" parent="front/clear_terrain"]
+margin_left = 3.0
+margin_top = 16.0
+margin_right = 139.0
+margin_bottom = 34.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "terrain"
+align = 1
+uppercase = true
+
+[node name="theme" type="TextureButton" parent="front"]
+margin_left = -32.0
+margin_top = 94.0
+margin_right = 142.0
+margin_bottom = 142.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="front/theme"]
+margin_left = 3.0
+margin_top = 16.0
+margin_right = 180.0
+margin_bottom = 34.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SUMMER"
+align = 1
+uppercase = true
+
+[node name="close" type="TextureButton" parent="front"]
+margin_left = 413.0
+margin_top = 358.0
+margin_right = 557.0
+margin_bottom = 406.0
+scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="front/close"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 139.0
+margin_bottom = 34.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "close"
+align = 1
+uppercase = true
+script = ExtResource( 16 )
+trans_key = "LABEL_CLOSE"

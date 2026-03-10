@@ -15,7 +15,7 @@ func load_data_from_file(file_name, is_remote=false):
 
     if self.file.file_exists(file_path):
         self.file.open(file_path, File.READ)
-        self.data =  file.get_var()
+        self.data = file.get_var(true)
         print('ToF: map ' + file_path + ' loaded from file')
         file.close()
         return true
@@ -45,4 +45,3 @@ func get_theme():
 
 func get_tiles():
     return self.data['tiles']
-

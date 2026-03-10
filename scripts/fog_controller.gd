@@ -18,7 +18,7 @@ func init_node(map_controller_object, terrain_node):
     self.build_fog_pattern()
 
 func is_fogged(tile):
-    return current_fog_state[tile] > -1
+    return current_fog_state.get(tile, -1) > -1
 
 func build_fog_pattern():
     var sprite = 0
@@ -57,10 +57,11 @@ func fill_fog():
 func clear_fog_range(center, size):
     var tile = center
     self.current_fog_state[tile] = -1
-    for mod in self.bag.positions.precalculated_nearby_tiles[size]:
-        tile = center + mod
-        if tile.x >=0 && tile.y >=0:
-            self.current_fog_state[tile] = -1
+    if size in self.bag.positions.precalculated_nearby_tiles:
+        for mod in self.bag.positions.precalculated_nearby_tiles[size]:
+            tile = center + mod
+            if tile.x >=0 && tile.y >=0:
+                self.current_fog_state[tile] = -1
     return
 
 func clear():
@@ -73,13 +74,10 @@ func add_cloud(x, y, sprite):
     fog_of_war.set_cell(x, y, sprite)
 
 func move_cloud(pos):
-    fog_of_war.set_pos(pos)
+    fog_of_war.position = pos
 
 func toggle_fog():
-    if self.fog_of_war.is_visible():
-        self.fog_of_war.hide()
-    else:
-        self.fog_of_war.show()
+    self.fog_of_war.visible = not self.fog_of_war.visible
 
 func hide_fog():
     self.fog_of_war.hide()
@@ -125,7 +123,7 @@ func __remove_fog(position_on_map, view_range):
     self.clear_fog_range(position_on_map, view_range)
 
 func is_cpu(player):
-    if root.settings['cpu_' + str(player)]:
+    if root.settings.get('cpu_' + str(player)):
         return true
 
     return false

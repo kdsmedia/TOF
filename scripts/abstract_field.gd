@@ -1,3 +1,5 @@
+extends Reference
+
 var terrain_type
 var position
 var object = null
@@ -5,7 +7,7 @@ var damage = null
 var abstract_map = null
 var waypoint = null
 
-var destroyed_tile_template = load("res://terrain/destroyed_tile.xscn")
+var destroyed_tile_template = load("res://terrain/destroyed_tile.tscn")
 
 func is_adjacent(field):
     var diff_x = abs(self.position.x - field.position.x)
@@ -15,7 +17,7 @@ func is_adjacent(field):
 
 func add_damage(damage_layer):
     self.damage = destroyed_tile_template.instance()
-    var damage_frames = self.damage.get_vframes() * self.damage.get_hframes()
+    var damage_frames = self.damage.vframes * self.damage.hframes
     var damage_frame = randi() % damage_frames
 
     self.add_damage_frame(damage_layer, damage_frame)
@@ -25,8 +27,8 @@ func add_damage_frame(damage_layer, damage_frame):
     damage_layer.add_child(damage)
     var damage_position = abstract_map.tilemap.map_to_world(self.position)
     damage_position.y += 8
-    self.damage.set_pos(damage_position)
-    self.damage.set_frame(damage_frame)
+    self.damage.position = damage_position
+    self.damage.frame = damage_frame
 
 func is_empty():
     return self.terrain_type < 0

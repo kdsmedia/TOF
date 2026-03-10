@@ -18,17 +18,18 @@ var popup_top_offset = 245
 
 func init_root(root_node):
     self.root = root_node
-    self.screen_size = Vector2(1280, 720)
     self.ready = true
 
 func is_dead_zone(x, y):
     if not self.ready:
         return false
 
+    self.screen_size = self.root.get_viewport().size
+
     if self.check_if_in_zone(x, y, 0, self.top_hud_size):
         return true
 
-    if self.root.hud_controller.hud_message_card.is_visible():
+    if self.root.hud_controller.hud_message_card.visible:
         if self.check_if_in_zone(x, y, self.popup_top_offset, self.popup_size):
             return true
 
@@ -36,21 +37,21 @@ func is_dead_zone(x, y):
     if self.root.hud_layout == "overscan" or self.root.settings['is_overscan']:
         overscan_offset = self.bottom_hud_overscan_offset.y
 
-    if self.root.bag.controllers.hud_panel_controller.hud_panel.is_visible():
+    if self.root.bag.controllers.hud_panel_controller.hud_panel.visible:
         if self.check_if_in_zone(x, y, self.screen_size.y - self.bottom_hud_size.y - overscan_offset, self.bottom_hud_size):
 
-            if not self.root.bag.controllers.hud_panel_controller.building_panel.building_panel.is_visible() and not self.root.bag.controllers.hud_panel_controller.unit_panel.unit_panel.is_visible() and self.check_if_in_zone(x, y, self.screen_size.y - self.selected_panel_size.y - overscan_offset, Vector2(self.selected_panel_size.x, self.selected_panel_size.y + overscan_offset)):
+            if not self.root.bag.controllers.hud_panel_controller.building_panel.building_panel.visible and not self.root.bag.controllers.hud_panel_controller.unit_panel.unit_panel.visible and self.check_if_in_zone(x, y, self.screen_size.y - self.selected_panel_size.y - overscan_offset, Vector2(self.selected_panel_size.x, self.selected_panel_size.y + overscan_offset)):
                 return false
             return true
 
 
-        #if self.root.bag.controllers.hud_panel_controller.unit_panel.unit_panel_extras.is_visible():
+        #if self.root.bag.controllers.hud_panel_controller.unit_panel.unit_panel_extras.visible:
         #    if self.check_if_in_zone(x, y, self.screen_size.y - (self.bottom_hud_size.y + self.unit_panel_size.y), self.unit_panel_size):
         #        return true
-        #if self.root.bag.controllers.hud_panel_controller.building_panel.building_panel.is_visible():
+        #if self.root.bag.controllers.hud_panel_controller.building_panel.building_panel.visible:
         #    if self.check_if_in_zone(x, y, self.screen_size.y - (self.bottom_hud_size.y + self.building_build_panel_size.y), self.building_build_panel_size):
         #        return true
-        #if self.root.bag.controllers.hud_panel_controller.building_panel.building_panel_upgrades_panel.is_visible():
+        #if self.root.bag.controllers.hud_panel_controller.building_panel.building_panel_upgrades_panel.visible:
         #    if self.check_if_in_zone(x, y, self.screen_size.y - (self.bottom_hud_size.y + self.building_research_panel_size.y), self.building_research_panel_size):
         #        return true
 

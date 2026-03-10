@@ -19,15 +19,14 @@ var units
 var waypoints = {}
 
 const lookout_range = 3
-var precalculated_nearby_tiles = [[[null]]]
-var precalculated_nearby_tiles_ranges = [[[null]]]
+var precalculated_nearby_tiles = []
+var precalculated_nearby_tiles_ranges = []
 
 const MAX_PRECALCULATED_TILES_RANGE = 31
 const CLOSE_RANGE = 0
 const MEDIUM_RANGE = 1
 const LONG_RANGE = 2
 const EXTREME_RANGE = 3 # will be not used in the future
-var TILES_LOOKUP_RANGES = IntArray(range(1, 31))
 
 # not changable data
 var buildings = []
@@ -37,8 +36,6 @@ func _initialize():
     self.root_node = bag.root
     self.root_tree = root_node.get_tree()
     bunkers = {0: null, 1: null}
-    self.prepare_nearby_tiles()
-    self.prepare_nearby_tiles_ranges()
 
 func bootstrap():
     buildings = self.root_tree.get_nodes_in_group("buildings")
@@ -128,7 +125,7 @@ func get_terrain_obstacles():
 func get_bunkers():
     for building in buildings:
         if (building.type == 0):
-            bunkers[building.get_player()] = building
+            bunkers[building.player] = building
 
 func get_terrain():
     for terrain in terrains:
@@ -164,12 +161,8 @@ func get_nearby_enemies(nearby_tiles, current_player):
 func get_buildings():
     buildings = self.root_tree.get_nodes_in_group("buildings")
     for building in buildings:
-        var wr = weakref(building)
-
-        if !wr.get_ref():
+        if not is_instance_valid(building):
             continue
-        else:
-            building = wr.get_ref()
 
         var pos = building.position_on_map
         var owner = building.player
@@ -220,9 +213,6 @@ func get_nearby_enemy_buildings(nearby_tiles, current_player):
 
     return buildings
 
-
-
-
 func get_waypoints():
     for waypoint in self.root_tree.get_nodes_in_group("waypoint"):
         self.waypoints[waypoint.position_on_map] = waypoint
@@ -247,26 +237,31 @@ func get_nearby_empty_buldings(nearby_tiles):
     return buildings
 
 func prepare_nearby_tiles():
+    precalculated_nearby_tiles.clear()
+    precalculated_nearby_tiles.append([]) # dist 0
     for distance in range(1, MAX_PRECALCULATED_TILES_RANGE):
         var tiles = []
-
         for x in range(-distance, distance + 1):
-            for y in range(-distance, distance  + 1):
-                # we are skipping current tile
-                if (!(x == 0 && y == 0) && !(abs(x) + abs(y) > distance)):
+            for y in range(-distance, distance + 1):
+                if !(x == 0 && y == 0) && (abs(x) + abs(y) <= distance):
                     tiles.push_back(Vector2(x, y))
-        self.precalculated_nearby_tiles.insert(distance, tiles)
+        precalculated_nearby_tiles.append(tiles)
 
 func prepare_nearby_tiles_ranges():
-    self.precalculated_nearby_tiles_ranges.insert(0, precalculated_nearby_tiles[0])
+    precalculated_nearby_tiles_ranges.clear()
+    precalculated_nearby_tiles_ranges.append([]) # dist 0
     for i in range(1, MAX_PRECALCULATED_TILES_RANGE):
+        if i >= precalculated_nearby_tiles.size():
+            break
         var values = self.bag.helpers.array_diff(precalculated_nearby_tiles[i], precalculated_nearby_tiles[i - 1])
-        self.precalculated_nearby_tiles_ranges.insert(i, values)
+        precalculated_nearby_tiles_ranges.append(values)
 
 
 #get all tiles
 func get_nearby_tiles(position, lookup_range=CLOSE_RANGE):
-    var tiles = Vector2Array([])
+    var tiles = []
+    if lookup_range >= precalculated_nearby_tiles.size():
+        return tiles
 
     for tile_modifier in self.precalculated_nearby_tiles[lookup_range]:
         tiles.push_back(Vector2(position.x + tile_modifier.x, position.y + tile_modifier.y))
@@ -275,8 +270,8 @@ func get_nearby_tiles(position, lookup_range=CLOSE_RANGE):
 
 #only subset (ranges)
 func get_nearby_tiles_subset(position, lookup_range=CLOSE_RANGE):
-    var tiles = Vector2Array([])
-    if lookup_range == 0:
+    var tiles = []
+    if lookup_range == 0 or lookup_range >= precalculated_nearby_tiles_ranges.size():
         return tiles
 
     for tile_modifier in self.precalculated_nearby_tiles_ranges[lookup_range]:

@@ -1,0 +1,215 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://gui/font_16.tres" type="Theme" id=1]
+[ext_resource path="res://assets/gui/dialogs/menu9_dark@2x.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/dialogs/gui_spritesheet.png" type="Texture" id=3]
+[ext_resource path="res://gui/font_22.tres" type="Theme" id=4]
+[ext_resource path="res://assets/units/units_spritesheet.png" type="Texture" id=5]
+[ext_resource path="res://scripts/translate_me.gd" type="Script" id=6]
+[ext_resource path="res://gui/button_normal_theme.tres" type="Theme" id=7]
+
+[node name="end_game" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="center" type="Control" parent="."]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="background" type="Patch9Frame" parent="center"]
+margin_left = -296.0
+margin_top = -84.0
+margin_right = 296.0
+margin_bottom = 236.0
+texture = ExtResource( 2 )
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="headers" type="Control" parent="center/background"]
+
+[node name="domination" type="Label" parent="center/background/headers"]
+margin_left = -210.0
+margin_top = -32.0
+margin_right = -50.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.698039, 0.862745, 0.937255, 1 )
+text = "LABEL_DOMINATION"
+
+[node name="unit_moves" type="Label" parent="center/background/headers"]
+margin_left = -91.0
+margin_top = -32.0
+margin_right = 64.0
+margin_bottom = -12.0
+custom_colors/font_color = Color( 0.698039, 0.862745, 0.937255, 1 )
+text = "LABEL_MOVES"
+
+[node name="turn_time" type="Label" parent="center/background/headers"]
+margin_left = 65.0
+margin_top = -32.0
+margin_right = 280.0
+margin_bottom = -17.0
+custom_colors/font_color = Color( 0.698039, 0.862745, 0.937255, 1 )
+text = "LABEL_PLAYERS_TIME"
+
+[node name="kills" type="Label" parent="center/background/headers"]
+margin_left = 120.0
+margin_top = -32.0
+margin_right = 280.0
+margin_bottom = -17.0
+custom_colors/font_color = Color( 0.698039, 0.862745, 0.937255, 1 )
+text = "LABEL_ELIMINATED"
+
+[node name="overall" type="Label" parent="center/background/headers"]
+margin_left = 68.0
+margin_top = -2.0
+margin_right = 306.0
+margin_bottom = 87.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.968627, 0.886275, 0.419608, 1 )
+text = "LABEL_TOTAL_SCORE"
+
+[node name="spawn_count" type="Label" parent="center/background/headers"]
+margin_left = -4.0
+margin_top = -32.0
+margin_right = 136.0
+margin_bottom = -15.0
+custom_colors/font_color = Color( 0.698039, 0.862745, 0.937255, 1 )
+text = "LABEL_DEPLOYED"
+
+[node name="turns" type="Label" parent="center/background/headers"]
+margin_left = -270.0
+margin_top = 110.0
+margin_right = -160.0
+margin_bottom = 125.0
+custom_colors/font_color = Color( 0.694118, 0.858824, 0.937255, 1 )
+text = "LABEL_TURNS"
+
+[node name="time" type="Label" parent="center/background/headers"]
+margin_left = -269.0
+margin_top = 113.0
+margin_right = -193.0
+margin_bottom = 127.0
+custom_colors/font_color = Color( 0.694118, 0.858824, 0.937255, 1 )
+text = "LABEL_TIME"
+
+[node name="game_time" type="Label" parent="center/background/headers"]
+margin_left = -272.0
+margin_top = 113.0
+margin_right = -134.0
+margin_bottom = 127.0
+custom_colors/font_color = Color( 0.694118, 0.858824, 0.937255, 1 )
+text = "LABEL_GAME_TIME"
+
+[node name="game_over" type="Label" parent="center/background"]
+margin_left = -280.0
+margin_top = -87.0
+margin_right = -21.0
+margin_bottom = -64.0
+theme = ExtResource( 4 )
+text = "LABEL_GAME_OVER"
+
+[node name="blue" type="Control" parent="center/background"]
+
+[node name="blue1" type="Label" parent="center/background/blue"]
+margin_left = -179.0
+margin_top = 36.0
+margin_right = 91.0
+margin_bottom = 106.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.639216, 0.807843, 0.152941, 1 )
+text = "LABEL_BLUE"
+
+[node name="blue2" type="Label" parent="center/background/blue"]
+margin_left = 3.0
+margin_top = 94.0
+margin_right = 185.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0.639216, 0.807843, 0.152941, 1 )
+text = "9999"
+
+[node name="blue3" type="Label" parent="center/background/blue"]
+margin_left = -22.0
+margin_top = 94.0
+margin_right = 125.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0.639216, 0.807843, 0.152941, 1 )
+text = "9999"
+
+[node name="red" type="Control" parent="center/background"]
+
+[node name="red1" type="Label" parent="center/background/red"]
+margin_left = 7.0
+margin_top = 36.0
+margin_right = 241.0
+margin_bottom = 107.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.968627, 0.886275, 0.419608, 1 )
+text = "LABEL_RED"
+
+[node name="red2" type="Label" parent="center/background/red"]
+margin_left = -183.0
+margin_top = 94.0
+margin_right = 22.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0.968627, 0.886275, 0.419608, 1 )
+text = "9999"
+
+[node name="red3" type="Label" parent="center/background/red"]
+margin_left = 147.0
+margin_top = 94.0
+margin_right = 241.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0.968627, 0.886275, 0.419608, 1 )
+text = "9999"
+
+[node name="win" type="Control" parent="center/background"]
+
+[node name="blue_win" type="Label" parent="center/background/win"]
+margin_left = 5.0
+margin_top = 53.0
+margin_right = 215.0
+margin_bottom = 76.0
+theme = ExtResource( 4 )
+text = "LABEL_BLUE_WINS"
+script = ExtResource( 6 )
+trans_key = "LABEL_BLUE_WINS"
+
+[node name="red_win" type="Label" parent="center/background/win"]
+margin_left = 3.0
+margin_top = 53.0
+margin_right = 209.0
+margin_bottom = 76.0
+theme = ExtResource( 4 )
+text = "LABEL_RED_WINS"
+script = ExtResource( 6 )
+trans_key = "LABEL_RED_WINS"
+
+[node name="controls" type="Control" parent="center"]
+
+[node name="menu" type="Button" parent="center/controls"]
+margin_left = -125.0
+margin_top = 220.0
+margin_right = -36.0
+margin_bottom = 260.0
+theme = ExtResource( 7 )
+text = "MENU"
+
+[node name="campaign" type="Button" parent="center/controls"]
+margin_left = 119.0
+margin_top = 220.0
+margin_right = 279.0
+margin_bottom = 260.0
+theme = ExtResource( 7 )
+text = "CAMPAIGN"
+
+[node name="restart" type="Button" parent="center/controls"]
+margin_left = -12.0
+margin_top = 220.0
+margin_right = 100.0
+margin_bottom = 260.0
+theme = ExtResource( 7 )
+text = "PLAY AGAIN"

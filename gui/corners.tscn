@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/gui/extras/corner.png" type="Texture" id=1]
+
+[node name="corners" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TopLeft" type="TextureRect" parent="."]
+margin_right = 192.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 0
+
+[node name="TopRight" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -192.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 0
+flip_h = true
+
+[node name="BottomLeft" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -144.0
+margin_right = 192.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 0
+flip_v = true
+
+[node name="BottomRight" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -192.0
+margin_top = -144.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 0
+flip_h = true
+flip_v = true

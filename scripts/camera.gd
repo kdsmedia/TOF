@@ -45,8 +45,8 @@ var camera_speeds = [
 
 func _initialize():
     self.root = self.bag.root
-    self.camera = self.root.get_node("/root/game/viewport/camera")
-    self.game_logic = self.root.get_node("/root/game")
+    self.camera = self.root.get_node("viewport/camera")
+    self.game_logic = self.root
     self.camera_zoom_level_pos = self.root.settings['camera_zoom']
     self.update_zoom()
 
@@ -54,13 +54,13 @@ func _initialize():
     self.update_camera_speed()
 
 func update_zoom():
-    self.scale = self.camera.get_zoom()
+    self.scale = self.camera.zoom
 
 func get_pos():
-    return self.camera.get_offset()
+    return self.camera.position
 
 func set_pos(position):
-    self.camera.set_offset(position)
+    self.camera.position = position
     self.target = position
     self.pos = position
     self.sX = position.x
@@ -93,14 +93,14 @@ func set_zoom_value(value):
     self.camera_zoom_level_pos = value
     new_scale = self.camera_zoom_levels[self.camera_zoom_level_pos]
     self.scale = Vector2(new_scale, new_scale)
-    self.camera.set_zoom(self.scale)
-    self.root.bag.workshop.camera.set_zoom(self.scale)
+    self.camera.zoom = self.scale
+    self.root.bag.workshop.camera.zoom = self.scale
     self.root.game_scale = self.scale
     self.root.settings['camera_zoom'] = self.camera_zoom_level_pos
     self.root.write_settings_to_file()
 
 func set_camera_zoom(zoom_value):
-    self.camera.set_zoom(Vector2(zoom_value, zoom_value))
+    self.camera.zoom = Vector2(zoom_value, zoom_value)
     self.scale = Vector2(zoom_value, zoom_value)
     self.bag.controllers.background_map_controller.update_background_scale()
 
@@ -114,7 +114,7 @@ func move_to_map(target, forced_movement = false):
         return
 
     if not mouse_dragging:
-        self.game_size = self.game_logic.get_size()
+        self.game_size = get_viewport_rect().size
         var target_position = self.bag.abstract_map.tilemap.map_to_world(target)
         var diff_x = target_position.x - self.sX
         var diff_y = target_position.y - self.sY
@@ -131,7 +131,7 @@ func move_to_map_center():
     if self.root.current_map != null:
         self.move_to_map(Vector2(self.bag.abstract_map.MAP_MAX_X / 2, self.bag.abstract_map.MAP_MAX_Y / 2))
 
-func process(delta):
+func _process(delta):
     if not pos == target:
         temp_delta += delta
         if temp_delta > MAP_STEP:
@@ -145,7 +145,7 @@ func process(delta):
                 self.sX = self.sX + diff_x * temp_delta * self.camera_speed;
                 self.sY = self.sY + diff_y * temp_delta * self.camera_speed;
                 var new_pos = Vector2(self.sX, self.sY)
-                self.camera.set_offset(new_pos)
+                self.camera.position = new_pos
             temp_delta = 0
     else:
         panning = false
@@ -158,14 +158,6 @@ func process(delta):
             self.awesome_explosions_interval_counter = 0
         else:
             self.awesome_explosions_interval_counter += 1
-
-func __do_panning(diff_x, diff_y):
-    var threshold_x = PAN_THRESHOLD * self.scale.x
-    var threshold_y = PAN_THRESHOLD * self.scale.y
-    if diff_x > -threshold_x && diff_x < threshold_x && diff_y > -threshold_y && diff_y < threshold_y:
-        return false
-
-    return true
 
 func stop():
     self.set_pos(self.pos)
@@ -188,3 +180,20 @@ func restore_position_for_player(player):
 
 func update_camera_speed():
     self.camera_speed = self.camera_speeds[self.bag.root.settings['camera_speed']]
+
+
+var awesome_explosions_interval = 10
+var awesome_explosions_interval_counter = 0
+func do_awesome_cinematic_pan():
+    pass
+
+func do_awesome_random_explosions():
+    pass
+
+func __do_panning(diff_x, diff_y):
+    var threshold_x = PAN_THRESHOLD * self.scale.x
+    var threshold_y = PAN_THRESHOLD * self.scale.y
+    if diff_x > -threshold_x && diff_x < threshold_x && diff_y > -threshold_y && diff_y < threshold_y:
+        return false
+
+    return true

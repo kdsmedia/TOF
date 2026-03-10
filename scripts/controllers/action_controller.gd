@@ -5,7 +5,7 @@ var ysort
 var damage_layer
 var selector
 var active_field = null
-var active_indicator = preload('res://gui/selector.xscn').instance()
+var active_indicator = preload('res://gui/selector.tscn').instance()
 var hud_controller = preload('res://scripts/hud_controller.gd').new()
 var status = load('res://scripts/controllers/action_status.gd').new()
 var sound_controller
@@ -57,7 +57,7 @@ func reset():
 func init_root(root, map, hud):
     self.reset()
     self.root_node = root
-    self.root_tree = self.root_node.get_tree()
+    self.root_tree = get_tree()
 
     self.root_node.bag.abstract_map.reset()
     self.root_node.bag.abstract_map.init_map(map)
@@ -77,7 +77,7 @@ func init_root(root, map, hud):
     self.positions.get_player_bunker_position(self.current_player)
 
     sound_controller = root.sound_controller
-    var interaction_template = load('res://gui/movement.xscn')
+    var interaction_template = load('res://gui/movement.tscn')
     for direction in self.interaction_indicators:
         self.interaction_indicators[direction]['indicator'] = interaction_template.instance()
         ysort.add_child(self.interaction_indicators[direction]['indicator'])
@@ -173,7 +173,7 @@ func activate_field(field):
     self.root_node.bag.abstract_map.tilemap.move_child(active_indicator, 0)
     var position = Vector2(self.root_node.bag.abstract_map.tilemap.map_to_world(field.position))
     position.y += 2
-    active_indicator.set_pos(position)
+    active_indicator.position = position
     sound_controller.play('select')
     if not self.is_cpu_player:
         if field.has_unit():
@@ -235,7 +235,7 @@ func add_interaction_indicators(field):
             self.__show_indicator(indicator, indicator_position, "enter")
 
 func __show_indicator(indicator, position, type):
-    indicator.set_pos(position)
+    indicator.position = position
     indicator.show()
     indicator.get_node('anim').play(type)
 
@@ -244,8 +244,8 @@ func hide_interaction_indicators():
         self.interaction_indicators[direction]['indicator'].hide()
 
 func despawn_unit(field):
-    ysort.remove_child(field.object)
-    field.object.call_deferred("free")
+    field.object.get_parent().remove_child(field.object)
+    field.object.queue_free()
     field.object.life = 0 #despawn bug
     field.object = null
 
@@ -286,9 +286,9 @@ func spawn_unit_from_active_building():
         return true
 
 func import_objects():
-    self.attach_objects(self.root_tree.get_nodes_in_group("units"))
-    self.attach_objects(self.root_tree.get_nodes_in_group("buildings"))
-    self.attach_objects(self.root_tree.get_nodes_in_group("terrain"))
+    self.attach_objects(get_tree().get_nodes_in_group("units"))
+    self.attach_objects(get_tree().get_nodes_in_group("buildings"))
+    self.attach_objects(get_tree().get_nodes_in_group("terrain"))
 
 func attach_objects(collection):
     for entity in collection:
@@ -442,7 +442,6 @@ func switch_to_player(player, save_game=true):
 
     self.reset_player_units(player)
     selector.set_player(player)
-    self.root_node.bag.abstract_map.map.current_player = player
     self.root_node.bag.fog_controller.clear_fog()
     self.root_node.bag.ap_gain.update()
     self.root_node.bag.controllers.hud_panel_controller.info_panel.info_panel_set_current_team(player)
@@ -466,7 +465,7 @@ func switch_to_player(player, save_game=true):
         if self.root_node.settings['tooltips_enabled']:
             hud_controller.show_in_game_card([], current_player)
         else:
-            hud_controller.call_deferred("begin_player_turn")
+            hud_controller.begin_player_turn()
 
 
 func perform_ai_stuff():
@@ -498,7 +497,7 @@ func end_game(winning_player):
     self.clear_active_field()
     self.game_ended = true
     self.root_node.bag.perform.stop_ai_timer()
-    if root_node.hud.is_hidden():
+    if not root_node.hud.visible:
         root_node.hud.show()
     hud_controller.show_win(winning_player, self.root_node.bag.battle_stats.get_stats(), turn)
     selector.hide()
@@ -653,4 +652,3 @@ func switch_unit(direction):
         if self.active_field != null:
             self.root_node.move_selector_to_map_position(self.active_field.position)
             self.move_camera_to_point(self.active_field.position)
-

@@ -1,3 +1,5 @@
+extends Node
+
 var bag = null
 
 func _init_bag(bag):

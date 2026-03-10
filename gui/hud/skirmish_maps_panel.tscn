@@ -1,0 +1,237 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/gui/dialogs/menu9_dark@2x.png" type="Texture" id=1]
+[ext_resource path="res://gui/hud/skirmish_maps_block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/gui/buttons/analog_size2_0.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/buttons/analog_size2_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/buttons/analog_size2_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/buttons/analog_size2_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/buttons/analog_size2_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/dialogs/gui_spritesheet.png" type="Texture" id=8]
+[ext_resource path="res://assets/gui/buttons/analog_size2_0.png" type="Texture" id=9]
+[ext_resource path="res://assets/gui/buttons/analog_size2_1.png" type="Texture" id=10]
+[ext_resource path="res://assets/gui/buttons/analog_size2_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/gui/buttons/analog_size2_4.png" type="Texture" id=12]
+
+[node name="maps_list" type="Control"]
+
+[node name="background" type="Control" parent="."]
+margin_left = -30.0
+margin_top = -30.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="background" type="NinePatchRect" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -257.0
+margin_top = -205.0
+margin_right = -197.0
+margin_bottom = -197.0
+texture = ExtResource( 1 )
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="Sprite33" type="Sprite" parent="background"]
+position = Vector2( -224, -165 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 16
+
+[node name="Sprite34" type="Sprite" parent="background"]
+position = Vector2( 0, -165 )
+scale = Vector2( 25, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 103
+
+[node name="Sprite35" type="Sprite" parent="background"]
+position = Vector2( 224, -165 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 107
+
+[node name="Sprite363" type="Sprite" parent="background"]
+position = Vector2( 0, 106 )
+scale = Vector2( 25, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 119
+
+[node name="Sprite37" type="Sprite" parent="background"]
+position = Vector2( -224, 106 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 118
+
+[node name="Sprite364" type="Sprite" parent="background"]
+position = Vector2( 224, 106 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 123
+
+[node name="Sprite365" type="Sprite" parent="background"]
+position = Vector2( 0, -30 )
+scale = Vector2( 25, 14 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 109
+
+[node name="Sprite365 2" type="Sprite" parent="background"]
+position = Vector2( 224, -30 )
+scale = Vector2( 3, 14 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 111
+
+[node name="Sprite38" type="Sprite" parent="background"]
+position = Vector2( -224, -30 )
+scale = Vector2( 3, 14 )
+texture = ExtResource( 8 )
+vframes = 8
+hframes = 8
+frame = 108
+
+[node name="controls" type="Control" parent="."]
+margin_left = -30.0
+margin_top = -30.0
+margin_right = -30.0
+margin_bottom = -30.0
+
+[node name="blocks" type="Control" parent="controls"]
+margin_left = -230.0
+margin_top = -170.0
+margin_right = -190.0
+margin_bottom = -130.0
+
+[node name="block" parent="controls/blocks" instance=ExtResource( 2 )]
+
+[node name="prev" type="TextureButton" parent="controls"]
+margin_left = 6.0
+margin_top = -50.0
+margin_right = 137.0
+margin_bottom = 46.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="controls/prev"]
+margin_left = 17.0
+margin_top = 17.0
+margin_right = 92.0
+margin_bottom = 35.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PREVIOUS"
+align = 1
+
+[node name="next" type="TextureButton" parent="controls"]
+margin_left = 50.0
+margin_top = 146.0
+margin_right = 3.0
+margin_bottom = 16.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="controls/next"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 95.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_NEXT"
+align = 1
+
+[node name="delete_mode" type="TextureButton" parent="controls"]
+margin_left = -249.0
+margin_top = -153.0
+margin_right = -35.0
+margin_bottom = 135.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="controls/delete_mode"]
+margin_left = 36.0
+margin_top = 36.0
+margin_right = 135.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0.745098, 0.14902, 0.2, 1 )
+text = "LABEL_DELETE"
+align = 1
+
+[node name="online" type="TextureButton" parent="controls"]
+margin_left = -150.0
+margin_top = -153.0
+margin_right = -4.0
+margin_bottom = 106.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="controls/online"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 95.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_LOCAL"
+align = 1
+
+[node name="maps_label" type="Label" parent="controls"]
+margin_left = 153.0
+margin_top = 147.0
+margin_right = 212.0
+margin_bottom = 162.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "MAPS:"
+
+[node name="maps" type="Label" parent="controls"]
+margin_left = 205.0
+margin_top = 147.0
+margin_right = 237.0
+margin_bottom = 162.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "34"
+
+[node name="page_label" type="Label" parent="controls"]
+margin_left = 153.0
+margin_top = 177.0
+margin_right = 212.0
+margin_bottom = 192.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "PAGE:"
+
+[node name="page" type="Label" parent="controls"]
+margin_left = 205.0
+margin_top = 177.0
+margin_right = 246.0
+margin_bottom = 192.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1/8"

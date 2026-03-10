@@ -1,21 +1,37 @@
 extends Sprite
 
-var anim
-var animation_total_duration
-export var color = 2
+enum PlayerColor { BLUE, RED, WHITE }
+export (PlayerColor) var color = PlayerColor.WHITE setget set_color
 
-func change_flag(color_code):
-	if color_code == 0:
-		anim.play("blue")
-	elif color_code == 1:
-		anim.play("red")
+onready var anim: AnimationPlayer = get_node("anim")
+
+func _ready() -> void:
+	randomize()
+	self.color = color # Set initial color
+
+func set_color(new_color: int) -> void:
+	color = new_color
+	var animation_name: String
+	match color:
+		PlayerColor.BLUE: # blue
+			animation_name = "blue"
+		PlayerColor.RED: # red
+			animation_name = "red"
+		_: # white
+			animation_name = "white"
+
+	if anim and anim.has_animation(animation_name):
+		anim.play(animation_name)
+		if anim.current_animation:
+			var animation = anim.get_animation(anim.current_animation)
+			if animation:
+				anim.seek(randf() * animation.length, true)
+
+func change_flag(player_id: int):
+	# player_id: -1 for neutral, 0 for blue, 1 for red
+	if player_id == 0:
+		set_color(PlayerColor.BLUE)
+	elif player_id == 1:
+		set_color(PlayerColor.RED)
 	else:
-		anim.play("white")
-	anim.seek(randf() * animation_total_duration,true)
-
-func _ready():
-	anim = self.get_node("anim")
-	animation_total_duration = anim.get_current_animation_length()
-	change_flag(color)
-	pass
-	
+		set_color(PlayerColor.WHITE)

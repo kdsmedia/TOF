@@ -1,0 +1,353 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/gui/dialogs/menu9_dark@2x.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/buttons/analog_size2_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/buttons/analog_size2_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/buttons/analog_size2_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/buttons/analog_size2_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/buttons/analog_size2_4.png" type="Texture" id=6]
+[ext_resource path="res://gui/font_32.tres" type="Theme" id=7]
+[ext_resource path="res://gui/font_22.tres" type="Theme" id=8]
+[ext_resource path="res://assets/units/blueprint_units.png" type="Texture" id=9]
+[ext_resource path="res://assets/gui/buttons/analog_size3_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/gui/buttons/analog_size3_1.png" type="Texture" id=11]
+[ext_resource path="res://assets/gui/buttons/analog_size3_2.png" type="Texture" id=12]
+[ext_resource path="res://assets/gui/buttons/analog_size3_3.png" type="Texture" id=13]
+[ext_resource path="res://assets/gui/buttons/analog_size3_6.png" type="Texture" id=14]
+[ext_resource path="res://assets/gui/buttons/analog_size3_7.png" type="Texture" id=15]
+[ext_resource path="res://assets/gui/buttons/analog_size3_4.png" type="Texture" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="campaign" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="middle" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="control" type="Control" parent="middle"]
+margin_left = 640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="dialog_background" type="NinePatchRect" parent="middle/control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -183.0
+margin_right = 240.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dialog_controls" type="Control" parent="middle/control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Introduction" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -183.0
+margin_top = 72.0
+margin_right = 145.0
+margin_bottom = -104.0
+text = "Sample sentence about this
+awesome campaign 
+full off zasadzkas."
+autowrap = true
+
+[node name="playing_as" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -230.0
+margin_right = -176.0
+margin_bottom = -78.0
+text = "PLAYING AS"
+align = 1
+valign = 1
+
+[node name="difficulty_button" type="TextureButton" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -17.0
+margin_top = 130.0
+margin_right = 190.0
+margin_bottom = -142.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+expand = true
+stretch_mode = 4
+
+[node name="difficulty_" type="Label" parent="middle/control/dialog_controls/difficulty_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -4.0
+margin_right = 4.0
+margin_bottom = -4.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_EASY"
+align = 1
+valign = 1
+
+[node name="mission_name" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = -211.0
+margin_right = 126.0
+margin_bottom = -193.0
+theme = ExtResource( 7 )
+text = "Lorem Ipsum"
+align = 1
+
+[node name="mission_num_" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -241.0
+margin_top = -218.0
+margin_right = -119.0
+margin_bottom = -123.0
+theme = ExtResource( 8 )
+text = "LABEL_MISSION"
+align = 1
+valign = 1
+
+[node name="mission_num" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -120.0
+margin_right = -94.0
+margin_bottom = -72.0
+theme = ExtResource( 7 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="blue" type="Sprite" parent="middle/control/dialog_controls"]
+position = Vector2( -110, 32 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+vframes = 6
+hframes = 6
+
+[node name="blue_team" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = 69.0
+margin_right = 255.0
+margin_bottom = 103.0
+text = "LABEL_BLUE_TEAM"
+
+[node name="red" type="Sprite" parent="middle/control/dialog_controls"]
+position = Vector2( 21, 32 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+flip_h = true
+vframes = 6
+hframes = 6
+frame = 3
+
+[node name="red_team" type="Label" parent="middle/control/dialog_controls"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = -109.0
+margin_right = 226.0
+margin_bottom = 98.0
+text = "LABEL_RED_TEAM"
+align = 1
+
+[node name="bottom" type="CenterContainer" parent="middle/control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 144.0
+margin_bottom = 328.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="left" type="CenterContainer" parent="middle/control/bottom"]
+margin_left = -304.0
+margin_top = 80.0
+margin_right = 304.0
+margin_bottom = 104.0
+
+[node name="close" type="TextureButton" parent="middle/control/bottom/left"]
+margin_left = -296.0
+margin_top = -12.0
+margin_right = -24.0
+margin_bottom = 12.0
+custom_styles/focus = SubResource( 1 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="middle/control/bottom/left/close"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_right = -16.0
+text = "> BACK"
+valign = 1
+
+[node name="right" type="CenterContainer" parent="middle/control/bottom"]
+margin_left = 336.0
+margin_top = 80.0
+margin_right = 944.0
+margin_bottom = 104.0
+
+[node name="start_button" type="TextureButton" parent="middle/control/bottom/right"]
+margin_left = 280.0
+margin_top = -12.0
+margin_right = 328.0
+margin_bottom = 12.0
+custom_styles/focus = SubResource( 1 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="middle/control/bottom/right/start_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_right = 6.0
+text = "LABEL_START"
+align = 2
+valign = 1
+
+[node name="title" type="Label" parent="middle/control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.0
+margin_top = -240.0
+margin_right = 239.0
+margin_bottom = -190.0
+theme = ExtResource( 7 )
+text = "LABEL_DIFFICULTY"
+align = 1
+valign = 1
+
+[node name="completed" type="Label" parent="middle/control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 21.0
+margin_top = -119.0
+margin_right = 234.0
+margin_bottom = -94.0
+custom_colors/font_color = Color( 0.745098, 0.14902, 0.2, 1 )
+text = "LABEL_MISSION_COMPLETED"
+align = 1
+valign = 1
+
+[node name="prev_button" type="TextureButton" parent="middle/control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -152.0
+margin_right = -80.0
+margin_bottom = 176.0
+custom_styles/focus = SubResource( 1 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="middle/control/prev_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 17.0
+margin_bottom = -17.0
+text = "LABEL_PREVIOUS"
+align = 1
+valign = 1
+
+[node name="next_button" type="TextureButton" parent="middle/control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 24.0
+margin_top = 138.0
+margin_right = 168.0
+margin_bottom = 320.0
+custom_styles/focus = SubResource( 1 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="middle/control/next_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 35.0
+margin_right = -22.0
+margin_bottom = -43.0
+text = "LABEL_NEXT"
+align = 1
+valign = 1

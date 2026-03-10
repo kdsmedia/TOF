@@ -71,7 +71,7 @@ func init_root(root, action_controller_object, hud):
     hud_vigette = hud.get_node("vigette/center/sprite")
 
     if self.root.settings['resolution'] == self.root.bag.resolution.UNLOCKED:
-        hud_vigette.set_scale(Vector2(7,7))
+        hud_vigette.scale = Vector2(7,7)
 
     #
     # HUD END GAME
@@ -140,7 +140,8 @@ func _hud_end_game_menu_button_pressed():
     self.root.sound_controller.play('menu')
     self.root.show_menu()
     self.root.unload_map()
-    self.root.bag.timers.set_timeout(0.1, self.root.menu.campaign_button, "grab_focus")
+    yield(get_tree().create_timer(0.1), "timeout")
+    self.root.menu.campaign_button.grab_focus()
 func _hud_message_card_button_pressed():
     self.root.sound_controller.play('menu')
     self.close_message_card()
@@ -169,11 +170,11 @@ func detach_hud_panel():
 
 func enable_back_to_workshop():
     self.back_to_workshop = true
-    self.menu_button_label.set_text("< " + tr("LABEL_WORKSHOP"))
+    self.menu_button_label.text = "< " + tr("LABEL_WORKSHOP")
 
 func disable_back_to_workshop():
     self.back_to_workshop = false
-    self.menu_button_label.set_text("< " + tr("LABEL_MAIN_MENU"))
+    self.menu_button_label.text = "< " + tr("LABEL_MAIN_MENU")
 
 func show_unit_card(unit, player):
     if self.hud_locked:
@@ -316,22 +317,22 @@ func fill_end_game_stats(stats, turns):
     var red_spawns = hud_end_game_stats_red.get_node("spawn_count")
     var red_score = hud_end_game_stats_red.get_node("overall")
 
-    hud_end_game_total_turns.set_text(str(turns))
-    hud_end_game_total_time.set_text(stats["total_time"])
+    hud_end_game_total_turns.text = str(turns)
+    hud_end_game_total_time.text = stats["total_time"]
 
-    blue_domination.set_text(str(stats["domination"][0]))
-    blue_moves.set_text(str(stats["moves"][0]))
-    blue_turn_time.set_text(str(stats["time"][0]))
-    blue_kills.set_text(str(stats["kills"][0]))
-    blue_spawns.set_text(str(stats["spawns"][0]))
-    blue_score.set_text(str(stats["score"][0]))
+    blue_domination.text = str(stats["domination"][0])
+    blue_moves.text = str(stats["moves"][0])
+    blue_turn_time.text = str(stats["time"][0])
+    blue_kills.text = str(stats["kills"][0])
+    blue_spawns.text = str(stats["spawns"][0])
+    blue_score.text = str(stats["score"][0])
 
-    red_domination.set_text(str(stats["domination"][1]))
-    red_moves.set_text(str(stats["moves"][1]))
-    red_turn_time.set_text(str(stats["time"][1]))
-    red_kills.set_text(str(stats["kills"][1]))
-    red_spawns.set_text(str(stats["spawns"][1]))
-    red_score.set_text(str(stats["score"][1]))
+    red_domination.text = str(stats["domination"][1])
+    red_moves.text = str(stats["moves"][1])
+    red_turn_time.text = str(stats["time"][1])
+    red_kills.text = str(stats["kills"][1])
+    red_spawns.text = str(stats["spawns"][1])
+    red_score.text = str(stats["score"][1])
 
 func switch_cinematic_to_cpu_meter():
     self.update_cinematic_label(tr('LABEL_CPU_TURN'))
@@ -345,6 +346,7 @@ func show_cinematic_camera():
 
 func hide_cinematic_camera():
     self.cinematic_camera_anim.play("off")
+    yield(self.cinematic_camera_anim, "animation_finished")
     self.cinematic_camera.hide()
 
 func update_cpu_progress(current_ap, overall_ap):
@@ -357,10 +359,10 @@ func update_cpu_progress(current_ap, overall_ap):
     percent = 10 - percent
     if percent > 9:
         percent = 9
-    self.cinematic_progress.set_frame(percent)
+    self.cinematic_progress.frame = percent
 
 func update_cinematic_label(text):
-    self.cinematic_label.set_text(text)
+    self.cinematic_label.text = text
 
 func __show_next_tip():
 	return self.tips.next_tip()
@@ -376,15 +378,15 @@ func show_story_message(left, message, avatar_frame, avatar_name, callback_objec
     if left:
         self.hud_story_message_left.show()
         self.hud_story_message_right.hide()
-        self.hud_story_message_left_text.set_text(message)
-        self.hud_story_message_left_avatar.set_frame(avatar_frame)
-        self.hud_story_message_left_name.set_text(avatar_name)
+        self.hud_story_message_left_text.text = message
+        self.hud_story_message_left_avatar.frame = avatar_frame
+        self.hud_story_message_left_name.text = avatar_name
     else:
         self.hud_story_message_left.hide()
         self.hud_story_message_right.show()
-        self.hud_story_message_right_text.set_text(message)
-        self.hud_story_message_right_avatar.set_frame(avatar_frame)
-        self.hud_story_message_right_name.set_text(avatar_name)
+        self.hud_story_message_right_text.text = message
+        self.hud_story_message_right_avatar.frame = avatar_frame
+        self.hud_story_message_right_name.text = avatar_name
 
     self.root.hud.add_child(self.hud_story_message)
     self.hud_story_message_button.grab_focus()
@@ -401,8 +403,8 @@ func fix_story_message_size(newsize=null):
         margin = max((self.root.bag.camera.game_logic.get_size().x - 976) / 2, 24)
     else:
         margin = max((newsize.x - 976) / 2, 24)
-    self.hud_story_message.set_margin(MARGIN_LEFT, margin)
-    self.hud_story_message.set_margin(MARGIN_RIGHT, margin)
+    self.hud_story_message.margin_left = margin
+    self.hud_story_message.margin_right = margin
 
 func set_current_team_label(team):
     if team == 0:

@@ -4,7 +4,7 @@ var version_name = "Version 0.7.1-BETA"
 var version_visible = "0.7.1"
 var version_short = "0.7.0"
 
-var selector = preload('res://gui/selector.xscn').instance()
+var selector = preload('res://gui/selector.tscn').instantiate()
 var selector_position
 var current_map_terrain
 var camera_pos
@@ -20,18 +20,18 @@ var hud_template
 var screen_size
 var half_screen_size = Vector2(0, 0)
 
-var intro = preload('res://intro.xscn').instance()
-var loading_screen = preload('res://gui/loading.xscn').instance()
+var intro = preload('res://intro.tscn').instantiate()
+var loading_screen = preload('res://gui/loading.tscn').instantiate()
 
 var action_controller
-var sound_controller = preload("sound_controller.gd").new()
+var sound_controller = preload("res://scripts/sound_controller.gd").new()
 var hud_controller
 var current_map
 var current_map_name
 var hud
 var bag
 
-var map_template = preload('res://maps/workshop.xscn')
+var map_template = preload('res://maps/workshop.tscn')
 var main_tileset
 
 var settings = {
@@ -68,14 +68,13 @@ var is_paused = false
 var is_locked_for_cpu = false
 var is_from_workshop = false
 var is_camera_drag = false
-var settings_file = File.new()
 var workshop_file_name
 var is_remote = false
-var is_pandora = Globals.get("tof/pandora_input")
-var is_mobile = Globals.get("tof/mobile_prompt")
-var is_debug = Globals.get("tof/debug_mode")
-var click_fix_position = Globals.get("tof/selector_offset")
-var hud_layout = Globals.get("tof/hud_layout")
+var is_pandora = ProjectSettings.get_setting("tof/pandora_input")
+var is_mobile = ProjectSettings.get_setting("tof/mobile_prompt")
+var is_debug = ProjectSettings.get_setting("tof/debug_mode")
+var click_fix_position = ProjectSettings.get_setting("tof/selector_offset")
+var hud_layout = ProjectSettings.get_setting("tof/hud_layout")
 
 var registered_click = false
 var registered_click_position = Vector2(0, 0)
@@ -93,76 +92,76 @@ func _input(event):
 
     if is_map_loaded && is_paused == false:
         if is_locked_for_cpu == false or self.bag.match_state.is_multiplayer:
-            game_scale = self.camera.get_scale()
-            camera_pos = self.camera.get_pos()
-            if event.type == InputEvent.MOUSE_BUTTON && (event.button_index == BUTTON_LEFT or event.button_index == BUTTON_RIGHT) && self.is_map_loaded:
+            game_scale = self.camera.zoom
+            camera_pos = self.camera.position
+            if event is InputEventMouseButton and (event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_RIGHT) and self.is_map_loaded:
                 self.is_camera_drag = event.pressed
                 self.bag.camera.mouse_dragging = event.pressed
-            if (event.type == InputEvent.MOUSE_MOTION or event.type == InputEvent.MOUSE_BUTTON):
-                var new_selector_x = (event.x - self.half_screen_size.x + camera_pos.x/game_scale.x) * (game_scale.x)
-                var new_selector_y = (event.y - self.half_screen_size.y + camera_pos.y/game_scale.y) * (game_scale.y) + 5
+            if (event is InputEventMouseMotion or event is InputEventMouseButton):
+                var new_selector_x = (event.position.x - self.half_screen_size.x + camera_pos.x/game_scale.x) * (game_scale.x)
+                var new_selector_y = (event.position.y - self.half_screen_size.y + camera_pos.y/game_scale.y) * (game_scale.y) + 5
                 selector_position = current_map_terrain.world_to_map(Vector2(new_selector_x, new_selector_y))
-            if (event.type == InputEvent.MOUSE_MOTION):
+            if (event is InputEventMouseMotion):
                 var position = current_map_terrain.map_to_world(selector_position)
                 position.y += 4
-                selector.set_pos(position)
+                selector.position = position
                 if self.is_camera_drag:
-                    camera_pos.x = camera_pos.x - event.relative_x * game_scale.x
-                    camera_pos.y = camera_pos.y - event.relative_y * game_scale.y
-                    self.camera.set_pos(camera_pos)
+                    camera_pos.x = camera_pos.x - event.relative.x * game_scale.x
+                    camera_pos.y = camera_pos.y - event.relative.y * game_scale.y
+                    self.camera.position = camera_pos
 
         if is_locked_for_cpu == false:
-            if event.type == InputEvent.JOYSTICK_BUTTON or event.type == InputEvent.JOYSTICK_MOTION:
+            if event is InputEventJoypadButton or event is InputEventJoypadMotion:
                 self.bag.gamepad.handle_input(event)
-            if self.is_pandora and event.type == InputEvent.KEY:
+            if self.is_pandora and event is InputEventKey:
                 self.bag.pandora.handle_input(event)
 
 
-            if (event.type == InputEvent.MOUSE_MOTION):
+            if (event is InputEventMouseMotion):
                 var position = current_map_terrain.map_to_world(selector_position)
                 position.y += 4
-                selector.set_pos(position)
-                if self.registered_click and abs(event.x - self.registered_click_position.x) > self.registered_click_threshold and abs(event.y - self.registered_click_position.y) > self.registered_click_threshold:
+                selector.position = position
+                if self.registered_click and abs(event.position.x - self.registered_click_position.x) > self.registered_click_threshold and abs(event.position.y - self.registered_click_position.y) > self.registered_click_threshold:
                     self.registered_click = false
 
             # MOUSE SELECT
-            if event.type == InputEvent.MOUSE_BUTTON && event.button_index == BUTTON_LEFT:
-                if not self.bag.hud_dead_zone.is_dead_zone(event.x, event.y):
+            if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT:
+                if not self.bag.hud_dead_zone.is_dead_zone(event.position.x, event.position.y):
                     var position = current_map_terrain.map_to_world(selector_position)
-                    if not self.bag.hud_dead_zone.is_dead_zone(event.x, event.y):
+                    if not self.bag.hud_dead_zone.is_dead_zone(event.position.x, event.position.y):
                         if event.is_pressed():
                             self.registered_click = true
-                            self.registered_click_position = Vector2(event.x, event.y)
+                            self.registered_click_position = event.position
                         else:
                             if self.registered_click:
                                 action_controller.handle_action(selector_position)
                                 self.registered_click = false
 
-        if event.type == InputEvent.KEY && event.scancode == KEY_H && event.pressed:
-            if hud.is_visible():
+        if event is InputEventKey and event.keycode == KEY_H and event.pressed:
+            if hud.visible:
                 hud.hide()
             else:
                 hud.show()
 
-        if event.type == InputEvent.KEY && event.scancode == KEY_C && event.pressed:
+        if event is InputEventKey and event.keycode == KEY_C and event.pressed:
             action_controller.switch_unit(self.bag.unit_switcher.NEXT)
-        if event.type == InputEvent.KEY && event.scancode == KEY_X && event.pressed:
+        if event is InputEventKey and event.keycode == KEY_X and event.pressed:
             action_controller.switch_unit(self.bag.unit_switcher.BACK)
-        if event.type == InputEvent.KEY && event.scancode == KEY_B && event.pressed:
+        if event is InputEventKey and event.keycode == KEY_B and event.pressed:
             self.bag.camera.move_to_map_center()
         if self.is_debug:
-            if event.type == InputEvent.KEY && event.scancode == KEY_F && event.pressed:
+            if event is InputEventKey and event.keycode == KEY_F and event.pressed:
                 self.bag.fog_controller.toggle_fog()
-            if event.type == InputEvent.KEY && event.scancode == KEY_V && event.pressed:
+            if event is InputEventKey and event.keycode == KEY_V and event.pressed:
                 print(current_map_terrain.world_to_map(current_map_terrain.map_to_world(selector_position)))
 
 
-        if event.type == InputEvent.MOUSE_BUTTON && event.button_index == BUTTON_WHEEL_UP && event.pressed:
+        if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_WHEEL_UP && event.pressed:
             self.bag.camera.camera_zoom_in()
-        if event.type == InputEvent.MOUSE_BUTTON && event.button_index == BUTTON_WHEEL_DOWN && event.pressed:
+        if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_WHEEL_DOWN && event.pressed:
             self.bag.camera.camera_zoom_out()
 
-    if Input.is_action_pressed('ui_cancel') && (event.type != InputEvent.KEY || not event.is_echo()):
+    if Input.is_action_pressed('ui_cancel') && (not (event is InputEventKey) or not event.is_echo()):
         if is_map_loaded and action_controller.active_field != null:
             action_controller.clear_active_field()
         else:
@@ -174,7 +173,7 @@ func move_selector_to_map_position(pos):
 
     var position = current_map_terrain.map_to_world(pos)
     position.y += 4
-    selector.set_pos(position)
+    selector.position = position
     selector_position = pos
 
 func load_map(template_name, workshop_file_name = false, load_saved_state = false, is_remote = false, post_load_object = null, post_load_method = null):
@@ -192,9 +191,9 @@ func load_map_deferred(args):
 func load_map_for_real(template_name, workshop_file_name = false, load_saved_state = false, is_remote = false, post_load_object = null, post_load_method = null):
     var human_player = 'cpu_0'
     current_map_name = template_name
-    current_map = map_template.instance()
+    current_map = map_template.instantiate()
     current_map._init_bag(self.bag)
-    current_map.get_node('terrain').set_tileset(self.bag.tileset_handler.available_tilesets[self.main_tileset])
+    current_map.get_node('terrain').tile_set = self.bag.tileset_handler.available_tilesets[self.main_tileset]
 
     # current_map.campaign = bag.campaign
     self.workshop_file_name = workshop_file_name
@@ -216,9 +215,9 @@ func load_map_for_real(template_name, workshop_file_name = false, load_saved_sta
         self.bag.controllers.hud_panel_controller.info_panel.set_map_name(self.bag.campaign.get_map_name(template_name))
     current_map.show_blueprint = false
     if self.settings['is_overscan']:
-        hud = self.hud_tv.instance()
+        hud = self.hud_tv.instantiate()
     else:
-        hud = hud_template.instance()
+        hud = hud_template.instantiate()
     self.bag.gamepad.show_gamepad_icons()
 
     current_map_terrain = current_map.get_node("terrain")
@@ -297,13 +296,13 @@ func unload_map():
         action_controller.active_indicator.get_parent().remove_child(action_controller.active_indicator)
     current_map_terrain.remove_child(selector)
     scale_root.remove_child(current_map)
-    current_map.call_deferred("free")
+    current_map.queue_free()
     current_map = null
     current_map_terrain = null
     self.hud_controller.disable_back_to_workshop()
     self.hud_controller.detach_hud_panel()
     self.remove_child(hud)
-    hud.call_deferred("free")
+    hud.queue_free()
     hud = null
     selector.reset()
     hud_controller = null
@@ -315,7 +314,7 @@ func unload_map():
 
     # Load and show interstitial ad when returning to the main menu
     var config = ConfigFile.new()
-    var err = config.load("res://engine.cfg")
+    var err = config.load("res://project.godot")
     if err == OK:
         var interstitial_ad_id = config.get_value("admob", "interstitial_ad_id")
         admob.load_interstitial(interstitial_ad_id)
@@ -328,7 +327,7 @@ func toggle_menu(target = 'menu', skip_back_check = true):
         return
 
     if is_map_loaded:
-        if menu.is_hidden():
+        if not menu.visible:
             is_paused = true
             action_controller.stats_set_time()
             menu.show()
@@ -349,11 +348,11 @@ func toggle_menu(target = 'menu', skip_back_check = true):
                 hud_controller.hud_end_game_missions_button.grab_focus()
 
 func show_menu():
-    if self.is_map_loaded and self.menu.is_hidden():
+    if self.is_map_loaded and not self.menu.visible:
         self.toggle_menu()
 
 func hide_menu():
-    if self.menu.is_visible():
+    if self.menu.visible:
         self.toggle_menu()
 
 func show_missions():
@@ -368,7 +367,7 @@ func load_menu():
     menu.show()
     is_intro = false
     self.remove_child(intro)
-    intro.call_deferred("free")
+    intro.queue_free()
     self.add_child(menu)
     menu.manage_close_button()
     self.bag.resolution.refresh_menu_background()
@@ -379,7 +378,7 @@ func load_menu():
     
     # Load rewarded ad on main menu load
     var config = ConfigFile.new()
-    var err = config.load("res://engine.cfg")
+    var err = config.load("res://project.godot")
     if err == OK:
         var rewarded_ad_id = config.get_value("admob", "rewarded_ad_id")
         admob.load_rewarded_video(rewarded_ad_id)
@@ -428,14 +427,14 @@ func write_settings_to_file():
 
 func _ready():
     var config = ConfigFile.new()
-    var err = config.load("res://engine.cfg")
+    var err = config.load("res://project.godot")
     if err == OK:
         var app_id = config.get_value("admob", "app_id")
         if admob.has_signal("interstitial_loaded"):
             admob.connect("interstitial_loaded", self, "_on_admob_interstitial_loaded")
         if admob.has_signal("rewarded_video_loaded"):
             admob.connect("rewarded_video_loaded", self, "_on_admob_rewarded_video_loaded")
-        admob.init(true, get_instance_ID())
+        admob.init(true, get_instance_id())
 
     self.bag = preload('res://scripts/services/dependency_container.gd').new()
     self.scale_root = get_node("/root/game/viewport/pixel_scale")
@@ -458,7 +457,7 @@ func _ready():
     self.add_child(intro)
     self.bag.language.reload_labels()
     if self.is_mobile:
-        self.get_tree().set_auto_accept_quit(false)
+        get_tree().auto_accept_quit = false
 
 func _on_admob_interstitial_loaded():
     admob.show_interstitial()
